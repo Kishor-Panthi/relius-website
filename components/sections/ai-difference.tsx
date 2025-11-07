@@ -40,22 +40,21 @@ export function AiDifference() {
   ];
 
   return (
-    <section className="py-14 px-6 lg:px-8 bg-white relative overflow-hidden">
-      {/* Single subtle background pattern */}
-      <div className="absolute inset-0 bg-pattern-dots opacity-40" />
+    <section className="py-20 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+      {/* Minimal decoration */}
+      <div className="absolute inset-0 bg-pattern-dots opacity-10" />
 
-      {/* Subtle decorative accents */}
-      <DecorativeOrb variant="accent" position="top-right" size="lg" animate />
-      <DecorativeOrb variant="primary" position="bottom-left" size="md" animate />
+      {/* Single subtle decorative accent */}
+      <DecorativeOrb variant="accent" position="bottom-left" size="sm" animate />
 
       <div className="mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-10">
-          <Badge variant="default" className="mb-3">
-            AI-Powered
+        <div className="text-center mb-14">
+          <Badge variant="default" className="mb-4 text-xs font-medium">
+            Work Smarter
           </Badge>
-          <h2 className="text-balance mb-3 text-slate-900">The AI Difference</h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Draft sermons in your voice. Turn messages into studies and posts. Spot needs earlier. Forecast attendance and giving. Translate on the fly.
+          <h2 className="text-balance mb-4 text-slate-900 text-3xl md:text-4xl font-bold">AI that helps, not hinders</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Save hours every week with thoughtful AI assistance. From drafting sermons to spotting care needs, Relius handles the heavy lifting so you can focus on people.
           </p>
         </div>
 

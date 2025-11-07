@@ -14,32 +14,39 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://relius.com"),
   title: {
-    default: "Relius | Church Management System with AI",
+    default: "Relius | Ministry-focused church software",
     template: "%s | Relius",
   },
-  description: "The modern Church Management System with built-in AI. Manage people, groups, events, giving, and volunteers with AI-powered workflows.",
-  keywords: ["church management system", "ChMS with AI", "sermon generator", "church event scheduling", "church donations analytics"],
+  description: "Relius is the ministry partner platform for churches-care for people, coordinate volunteers, plan services, and learn from real church stories.",
+  keywords: [
+    "church management software",
+    "ministry software",
+    "volunteer coordination",
+    "pastoral care tools",
+    "church resources",
+    "church stories",
+  ],
   authors: [{ name: "Relius" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://relius.com",
     siteName: "Relius",
-    title: "Relius | Church Management System with AI",
-    description: "The modern Church Management System with built-in AI. Manage people, groups, events, giving, and volunteers with AI-powered workflows.",
+    title: "Relius | Ministry-focused church software",
+    description: "Care for people, organize volunteers, and access church stories, resources, and insights built with ministry leaders.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Relius - Church AI Platform",
+        alt: "Relius - Ministry partner for churches",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Relius | Church Management System with AI",
-    description: "The modern Church Management System with built-in AI.",
+    title: "Relius | Ministry-focused church software",
+    description: "Stories, resources, and software that serve churches with warmth.",
     images: ["/og-image.png"],
   },
   robots: {

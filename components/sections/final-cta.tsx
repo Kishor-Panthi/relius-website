@@ -5,23 +5,22 @@ import { DecorativeOrb } from "@/components/ui/decorative-orb";
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden bg-mesh-primary py-16 px-6 lg:px-8">
-      <div className="absolute inset-0 bg-pattern-dots opacity-30" aria-hidden="true" />
-      <DecorativeOrb variant="accent" position="top-right" size="lg" animate />
-      <DecorativeOrb variant="primary" position="bottom-left" size="md" animate />
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-20 px-6 lg:px-8">
+      <div className="absolute inset-0 bg-pattern-dots opacity-10" aria-hidden="true" />
+      <DecorativeOrb variant="accent" position="top-right" size="sm" animate />
 
       <div className="relative z-10 mx-auto max-w-4xl">
-        <div className="rounded-2xl border border-primary-200/50 bg-white/90 px-8 py-10 text-center shadow-lg backdrop-blur-sm sm:px-12 sm:py-12">
-          <h2 className="text-balance mb-3 text-slate-900 text-3xl sm:text-4xl font-semibold">
-            See Relius in Action
+        <div className="rounded-2xl border border-slate-200 bg-white px-8 py-12 text-center shadow-xl sm:px-16 sm:py-16">
+          <h2 className="text-balance mb-4 text-slate-900 text-3xl sm:text-4xl font-bold">
+            Ready to focus more on ministry?
           </h2>
-          <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Discover how Relius can help your church save time, increase engagement, and focus on what matters most: your people.
+          <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+            Join churches that are spending less time managing software and more time caring for people. See how Relius can serve your ministry.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <Button variant="gradient" size="lg" asChild className="group">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button variant="gradient" size="lg" asChild className="group shadow-lg">
               <Link href="/contact">
-                Book a Demo
+                Schedule a Conversation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -29,11 +28,12 @@ export function FinalCta() {
               variant="secondary"
               size="lg"
               asChild
-              className="border-2 border-primary/20 text-primary hover:bg-primary/5"
+              className="border-2 border-slate-200 text-slate-700 hover:bg-slate-50"
             >
               <Link href="/contact">Join the Beta</Link>
             </Button>
           </div>
+          <p className="text-sm text-slate-500 mt-6">No pressure, just answers. Let's talk about your church's needs.</p>
         </div>
       </div>
     </section>

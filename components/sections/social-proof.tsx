@@ -5,68 +5,71 @@ import { DecorativeOrb } from "@/components/ui/decorative-orb";
 
 export function SocialProof() {
   const stats = [
-    "Built for churches 50-5,000+ members",
-    "Trusted by growing congregations",
-    "Modern technology meets ministry",
+    "Serving churches from 50 to 5,000+ members",
+    "Ministry-first, technology-second",
+    "Designed with pastors and church staff",
   ];
 
   const testimonials = [
     {
-      quote: "Relius has transformed how we manage our church. The AI features save us countless hours every week.",
-      author: "Pastor James Miller",
-      church: "Grace Community Church",
-      size: "450 members",
-    },
-    {
-      quote: "The event scheduling and volunteer management features are game-changers. Everything just works together.",
-      author: "Sarah Thompson",
-      church: "New Life Fellowship",
+      quote: "Before Relius, our volunteer coordinator spent 5 hours every week making schedules. Now it takes 30 minutes, and she spends that saved time actually connecting with volunteers.",
+      author: "Sarah Martinez",
+      role: "Operations Pastor",
+      church: "New Hope Community Church",
       size: "850 members",
     },
     {
-      quote: "Finally, a church management system that doesn't feel like it's from the 90s. Our whole team loves it.",
+      quote: "I was skeptical about church software with AI, but it's not about replacing ministry-it helps me serve better. The pastoral care insights helped us reach out to three families going through hard times we might have missed.",
+      author: "Rev. Michael Thompson",
+      role: "Lead Pastor",
+      church: "Grace Fellowship",
+      size: "320 members",
+    },
+    {
+      quote: "Our team ranges from tech-savvy millennials to volunteers who barely use email. Everyone adapted to Relius in days, not months. That's how you know it's designed well.",
       author: "David Chen",
-      church: "City Church",
+      role: "Church Administrator",
+      church: "City Church Downtown",
       size: "1,200 members",
     },
   ];
 
   return (
-    <section className="py-14 px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
-      {/* Single subtle background pattern */}
-      <div className="absolute inset-0 bg-pattern-grid opacity-20" />
+    <section className="py-20 px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+      {/* Minimal decoration */}
+      <div className="absolute inset-0 bg-pattern-grid opacity-5" />
 
-      {/* Subtle decorative accents */}
-      <DecorativeOrb variant="primary" position="top-right" size="lg" animate />
-      <DecorativeOrb variant="accent" position="bottom-left" size="md" animate />
+      {/* Single subtle decorative accent */}
+      <DecorativeOrb variant="primary" position="top-left" size="sm" animate />
 
       <div className="mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-10">
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
+        <div className="text-center mb-14">
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
             {stats.map((stat, index) => (
-              <Badge key={index} variant="secondary" className="px-3 py-1.5 text-sm">
+              <Badge key={index} variant="secondary" className="px-4 py-2 text-sm font-medium bg-white border-slate-200">
                 {stat}
               </Badge>
             ))}
           </div>
-          <h2 className="text-balance mb-3 text-slate-900">Trusted by Church Leaders</h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            See what pastors and church administrators are saying about Relius
+          <h2 className="text-balance mb-4 text-slate-900 text-3xl md:text-4xl font-bold">Real churches, real stories</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            See how church leaders are using Relius to spend less time on logistics and more time on ministry
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border border-slate-200 bg-white">
-              <CardContent className="p-5">
-                <Quote className="w-7 h-7 text-primary-200 mb-3" />
-                <p className="text-slate-700 mb-5 italic text-sm">
+            <Card key={index} className="border border-slate-200 bg-white shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <Quote className="w-8 h-8 text-primary-200 mb-4" />
+                <p className="text-slate-700 mb-6 leading-relaxed text-sm">
                   "{testimonial.quote}"
                 </p>
-                <div className="border-t border-slate-100 pt-3">
-                  <p className="font-semibold text-slate-900">{testimonial.author}</p>
+                <div className="border-t border-slate-100 pt-4">
+                  <p className="font-semibold text-slate-900 text-base">{testimonial.author}</p>
+                  <p className="text-sm text-slate-600 mt-1">{testimonial.role}</p>
                   <p className="text-sm text-slate-600">{testimonial.church}</p>
-                  <p className="text-xs text-slate-500 mt-1">{testimonial.size}</p>
+                  <p className="text-xs text-slate-500 mt-2">{testimonial.size}</p>
                 </div>
               </CardContent>
             </Card>

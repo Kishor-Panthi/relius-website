@@ -45,19 +45,18 @@ export function ProductPillars() {
   ];
 
   return (
-    <section id="features" className="py-14 px-6 lg:px-8 bg-mesh-accent relative overflow-hidden">
-      {/* Single subtle background pattern */}
-      <div className="absolute inset-0 bg-pattern-grid opacity-30" />
+    <section id="features" className="py-20 px-6 lg:px-8 bg-white relative overflow-hidden">
+      {/* Minimal decoration */}
+      <div className="absolute inset-0 bg-pattern-grid opacity-5" />
 
-      {/* Subtle decorative accents */}
-      <DecorativeOrb variant="primary" position="top-left" size="lg" animate />
-      <DecorativeOrb variant="accent" position="bottom-right" size="md" animate />
+      {/* Single subtle decorative accent */}
+      <DecorativeOrb variant="primary" position="top-right" size="sm" animate />
 
       <div className="mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-10">
-          <h2 className="text-balance mb-3 text-slate-900">Everything You Need to Run Your Church</h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Six powerful modules working together seamlessly
+        <div className="text-center mb-14">
+          <h2 className="text-balance mb-4 text-slate-900 text-3xl md:text-4xl font-bold">How Relius helps your church</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Six key areas working together, so you can spend less time on logistics and more time on what really matters
           </p>
         </div>
 

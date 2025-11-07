@@ -13,29 +13,30 @@ export default function PricingPage() {
   const tiers = [
     {
       name: "Basic",
-      description: "Core church management for growing churches",
+      description: "Essential tools to serve, equip, and plan",
       price: {
         monthly: "$99",
         annual: "$950",
       },
       popular: false,
       features: [
-        "People & Groups Management",
-        "Events & Calendar",
-        "Basic Check-ins",
-        "Basic Giving Tracking",
-        "Up to 500 members",
-        "Email support",
+        "Know your people - profiles, families, groups",
+        "Plan your ministry - events & calendar",
+        "Welcome well - check-ins & attendance",
+        "Track giving - donations & reports",
+        "Coordinate volunteers",
+        "Perfect for up to 500 members",
+        "Email support when you need help",
       ],
       notIncluded: [
-        "AI Features",
-        "Advanced Analytics",
-        "Priority Support",
+        "AI time-saving features",
+        "Advanced insights",
+        "Priority support",
       ],
     },
     {
       name: "Pro",
-      description: "Everything in Basic plus AI-powered ministry tools",
+      description: "Everything in Basic + AI to save hours every week",
       price: {
         monthly: "$299",
         annual: "$2,900",
@@ -43,40 +44,38 @@ export default function PricingPage() {
       popular: true,
       features: [
         "Everything in Basic",
-        "Sermon Generator",
-        "Content Studio",
-        "Pastoral Care AI",
-        "Translation Console",
-        "AI Insights Dashboard",
-        "Donations Manager AI",
-        "Up to 2,500 members",
-        "Priority email support",
-        "Phone support",
+        "Sermon prep assistance",
+        "Turn sermons into weekly content",
+        "Care insights & follow-up reminders",
+        "Live translation in 50+ languages",
+        "Giving forecasts & donor insights",
+        "Attendance predictions",
+        "Supports up to 2,500 members",
+        "Priority support via email & phone",
       ],
       notIncluded: [
         "Custom integrations",
-        "Dedicated account manager",
+        "Dedicated success partner",
       ],
     },
     {
       name: "Enterprise",
-      description: "Everything in Pro plus advanced features and support",
+      description: "For multi-site churches and custom needs",
       price: {
-        monthly: "Custom",
-        annual: "Custom",
+        monthly: "Let's talk",
+        annual: "Let's talk",
       },
       popular: false,
       features: [
         "Everything in Pro",
-        "Advanced analytics & reporting",
-        "Custom integrations",
-        "White-label options",
-        "Multi-site support",
-        "Dedicated account manager",
-        "Priority phone & chat support",
+        "Multi-site church management",
+        "Custom integrations with your tools",
+        "Advanced reporting & analytics",
+        "Dedicated success partner",
+        "Priority support with SLA",
+        "Custom training for your team",
         "Unlimited members",
-        "SLA guarantee",
-        "Custom training",
+        "White-label options available",
       ],
       notIncluded: [],
     },
@@ -84,28 +83,32 @@ export default function PricingPage() {
 
   const faqs = [
     {
-      question: "How is pricing calculated?",
-      answer: "Pricing is based on your church size (member count) and the features you need. Each tier has member limits, and we offer custom pricing for churches over 5,000 members.",
+      question: "How do I know which plan is right for our church?",
+      answer: "Start with your church size and whether you need AI features. Basic works great for churches under 500 members who want solid core features. Pro is ideal if you want AI to save time on sermon prep, content creation, and pastoral care. Enterprise is for multi-site churches or those with custom integration needs. Not sure? Let's talk-we'll help you find the right fit.",
     },
     {
-      question: "Can I switch plans later?",
-      answer: "Yes! You can upgrade or downgrade your plan at any time. When upgrading, you'll get immediate access to new features. When downgrading, changes take effect at the next billing cycle.",
+      question: "Can we start with Basic and upgrade later?",
+      answer: "Absolutely! Many churches start with Basic and add Pro when they're ready to leverage AI. You can upgrade anytime and get immediate access to new features. Your data comes with you-nothing gets lost.",
     },
     {
       question: "Is there a free trial?",
-      answer: "Yes, we offer a 14-day free trial of the Pro plan so you can experience all of our AI-powered features. No credit card required to start.",
+      answer: "Yes! We offer a 14-day free trial so you can experience Relius risk-free. No credit card required to start. We'll walk you through setup so you can see how it fits your church.",
     },
     {
-      question: "What happens if I exceed my member limit?",
-      answer: "We'll notify you as you approach your limit. You can easily upgrade to the next tier to accommodate your growing church. We'll never interrupt your service.",
+      question: "What if our church grows beyond the member limit?",
+      answer: "Great problem to have! We'll let you know as you approach your limit. You can upgrade easily to accommodate growth. We'll never cut off your service-your ministry comes first.",
     },
     {
-      question: "Do you offer discounts for annual billing?",
-      answer: "Yes! Annual billing saves you approximately 20% compared to monthly billing. It's a great way to reduce costs while getting full access to Relius.",
+      question: "Do you offer discounts or special pricing?",
+      answer: "Yes! Annual billing saves about 20% compared to monthly. We also offer 6 months free for church planters and special considerations for churches in unique situations. Just ask.",
     },
     {
-      question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards (Visa, Mastercard, American Express, Discover) and ACH bank transfers for annual plans. Stripe integration coming soon for additional options.",
+      question: "What kind of support can we expect?",
+      answer: "All plans include help when you need it. Basic gets email support with responses within 1-2 business days. Pro adds phone support and faster response times. Enterprise gets a dedicated success partner who knows your church and proactively helps you succeed.",
+    },
+    {
+      question: "Can we cancel anytime?",
+      answer: "Yes, no long-term contracts. If Relius isn't the right fit, you can cancel anytime. We'll help you export your data so you're never locked in. We'd rather earn your business month by month.",
     },
   ];
 
@@ -146,13 +149,35 @@ export default function PricingPage() {
   ];
 
   return (
-    <div className="py-14 px-6 lg:px-8">
+    <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-10">
-          <h1 className="mb-4">Simple, Transparent Pricing</h1>
-          <p className="text-xl text-slate-500 max-w-3xl mx-auto">
-            Start with the basics. Unlock AI when you're ready. Scale as you grow.
+        <div className="text-center mb-12">
+          <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900">Pricing that grows with your church</h1>
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Start with what you need. Add more when you're ready. No surprises, no hidden fees.
           </p>
+        </div>
+
+        {/* Decision helper */}
+        <div className="mb-12 max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+          <h3 className="text-lg font-semibold text-slate-900 mb-4 text-center">Which plan is right for your church?</h3>
+          <div className="grid md:grid-cols-3 gap-6 text-sm">
+            <div className="text-center">
+              <div className="font-semibold text-slate-900 mb-2">Basic</div>
+              <p className="text-slate-600">Perfect for churches under 500 members who need solid core features without AI</p>
+              <p className="text-slate-500 text-xs mt-2 italic">Example: Community Church (200 members)</p>
+            </div>
+            <div className="text-center">
+              <div className="font-semibold text-slate-900 mb-2">Pro</div>
+              <p className="text-slate-600">Best for churches wanting to save time with AI assistance and serve 500-2,500 members</p>
+              <p className="text-slate-500 text-xs mt-2 italic">Example: Grace Fellowship (850 members)</p>
+            </div>
+            <div className="text-center">
+              <div className="font-semibold text-slate-900 mb-2">Enterprise</div>
+              <p className="text-slate-600">Built for multi-site churches or those over 2,500 members needing custom solutions</p>
+              <p className="text-slate-500 text-xs mt-2 italic">Example: City Church Network (4,200 members)</p>
+            </div>
+          </div>
         </div>
 
         <Tabs defaultValue="annual" className="mb-10">
@@ -197,7 +222,7 @@ export default function PricingPage() {
                       asChild
                     >
                       <Link href="/contact">
-                        {tier.price.monthly === "Custom" ? "Contact Sales" : "Get Started"}
+                        {tier.price.monthly === "Let's talk" ? "Let's Talk" : "Get Started"}
                       </Link>
                     </Button>
                     <ul className="space-y-3">
@@ -253,7 +278,7 @@ export default function PricingPage() {
                       asChild
                     >
                       <Link href="/contact">
-                        {tier.price.annual === "Custom" ? "Contact Sales" : "Get Started"}
+                        {tier.price.annual === "Let's talk" ? "Let's Talk" : "Get Started"}
                       </Link>
                     </Button>
                     <ul className="space-y-3">
@@ -346,14 +371,20 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="text-center bg-gray-50 rounded-2xl p-12">
-          <h3 className="mb-4">Ready to get started?</h3>
-          <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
-            Book a demo to see Relius in action and find the perfect plan for your church
+        <div className="text-center bg-white border border-slate-200 rounded-2xl p-12 shadow-sm">
+          <h3 className="mb-4 text-2xl font-bold text-slate-900">Still have questions?</h3>
+          <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Let's have a conversation about your church's needs. We'll help you find the right plan and answer any questions you have.
           </p>
-          <Button variant="primary" size="lg" asChild>
-            <Link href="/contact">Book a Demo</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="primary" size="lg" asChild>
+              <Link href="/contact">Talk to Us</Link>
+            </Button>
+            <Button variant="secondary" size="lg" asChild>
+              <Link href="/features">See How It Works</Link>
+            </Button>
+          </div>
+          <p className="text-sm text-slate-500 mt-6">No pressure. We're here to help, not sell.</p>
         </div>
       </div>
     </div>

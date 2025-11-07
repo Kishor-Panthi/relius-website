@@ -11,35 +11,29 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Product", href: "/features" },
-    { name: "AI Features", href: "/ai" },
+    { name: "How It Works", href: "/features" },
     { name: "Pricing", href: "/pricing" },
-    {
-      name: "Resources",
-      href: "#",
-      submenu: [
-        { name: "Documentation", href: "/docs" },
-        { name: "Blog", href: "/blog" },
-      ],
-    },
+    { name: "Stories", href: "/stories" },
+    { name: "Resources", href: "/resources" },
+    { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-primary-200/30 glass shadow-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur-sm shadow-sm">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
-            <div className="p-2 rounded-xl bg-gradient-to-br from-primary-100 to-accent-100 transition-all group-hover:shadow-glow">
+            <div className="p-2 rounded-xl bg-primary-50 transition-all group-hover:bg-primary-100">
               <Image
                 src="/Relius Emblem.png"
                 alt="Relius Emblem"
-                width={48}
-                height={48}
-                className="transition-transform group-hover:scale-105 drop-shadow-sm"
+                width={40}
+                height={40}
+                className="transition-transform group-hover:scale-105"
               />
             </div>
-            <span className="text-xl font-bold gradient-text">Relius</span>
+            <span className="text-xl font-bold text-slate-900">Relius</span>
           </Link>
         </div>
 
@@ -75,7 +69,7 @@ export function Header() {
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Button variant="gradient" size="md" asChild>
-            <Link href="/contact">Book a Demo</Link>
+            <Link href="/contact">Get Started</Link>
           </Button>
         </div>
       </nav>
@@ -95,7 +89,7 @@ export function Header() {
             ))}
             <div className="pt-3">
               <Button variant="gradient" size="md" className="w-full" asChild>
-                <Link href="/contact">Book a Demo</Link>
+                <Link href="/contact">Get Started</Link>
               </Button>
             </div>
           </div>

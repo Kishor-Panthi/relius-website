@@ -17,6 +17,8 @@ export function Footer() {
       { name: "Book a Demo", href: "/contact" },
     ],
     resources: [
+      { name: "Stories", href: "/stories" },
+      { name: "Resources", href: "/resources" },
       { name: "Documentation", href: "/docs" },
       { name: "Blog", href: "/blog" },
       { name: "Support", href: "/contact" },
@@ -136,8 +138,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-slate-200 pt-6">
-          <p className="text-xs text-slate-500 text-center">
+        <div className="mt-12 border-t border-slate-200 pt-6 space-y-2 text-center">
+          <p className="text-sm font-semibold text-slate-600">Made for churches by people who care.</p>
+          <p className="text-xs text-slate-500">
             &copy; {new Date().getFullYear()} Relius. All rights reserved.
           </p>
         </div>

@@ -130,27 +130,27 @@ export default function SecurityPage() {
               </p>
               <ul className="grid md:grid-cols-2 gap-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Multi-region data replication</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Automated daily backups</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>99.9% uptime SLA (Enterprise)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>DDoS protection</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Load balancing & auto-scaling</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Disaster recovery procedures</span>
                 </li>
               </ul>
@@ -163,27 +163,27 @@ export default function SecurityPage() {
               </p>
               <ul className="grid md:grid-cols-2 gap-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Input sanitization and validation</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>SQL injection prevention</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Secure API design</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Rate limiting on all endpoints</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Dependency scanning</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Security headers (CSP, HSTS)</span>
                 </li>
               </ul>
@@ -196,27 +196,27 @@ export default function SecurityPage() {
               </p>
               <ul className="grid md:grid-cols-2 gap-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Data ownership remains with your church</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Export your data anytime</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>No data selling or third-party sharing</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Transparent privacy policies</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Member consent management</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-primary" aria-hidden="true">&bull;</span>
                   <span>Complete data deletion on request</span>
                 </li>
               </ul>
@@ -257,3 +257,5 @@ export default function SecurityPage() {
     </div>
   );
 }
+
+
