@@ -103,7 +103,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "welcome-first-time-guests",
+    slug: "first-time-guests-welcome",
     title: "Making first-time guests feel welcome: practical tips",
     excerpt: "A warm lobby is great. A thoughtful follow-up is better. Here's how churches are building guest pathways with Relius.",
     author: "Joel Reyes",
@@ -144,7 +144,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "running-church-200-vs-2000",
+    slug: "church-200-vs-2000",
     title: "Running a church of 200 vs 2,000: what actually changes",
     excerpt: "We pulled insights from churches in both lanes to show what truly shifts in systems, staffing, and soul care.",
     author: "Mika Thompson",
@@ -183,8 +183,8 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "ai-in-ministry-helper-or-hype",
-    title: "AI in ministry: helper or hype? (our honest take)",
+    slug: "ai-changing-church-administration",
+    title: "How AI is changing church administration",
     excerpt: "AI is not a pastor. But it can be a thoughtful assistant. Here's how we coach churches to use it without losing their voice.",
     author: "Caleb Morris",
     role: "Head of Product",
