@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, PlayCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2, RefreshCw, PlayCircle } from "lucide-react";
 
 import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
@@ -15,7 +15,7 @@ export function Hero() {
 
       <div className="container-width relative z-10">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-slate-600 text-sm font-medium mb-8 animate-fade-in-up hover:border-accent-200 hover:text-accent-600 transition-colors cursor-default">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-slate-600 text-sm font-medium mb-4 animate-fade-in-up hover:border-accent-200 hover:text-accent-600 transition-colors cursor-default">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
@@ -23,18 +23,27 @@ export function Hero() {
             New: AI-Powered Ministry Insights
           </div>
 
-          <h1 className="text-balance text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 animate-fade-in-up [animation-delay:200ms]">
-            Spend less time managing,<br />
-            more time <span className="text-gradient-accent relative inline-block">
-              ministering
+          <Link
+            href="/switch"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm font-medium mb-8 animate-fade-in-up [animation-delay:100ms] hover:bg-emerald-100 transition-colors"
+          >
+            <RefreshCw className="h-3.5 w-3.5" />
+            Easy migration from Planning Center, ChurchTrac & Tithe.ly
+          </Link>
+
+          <h1 className="text-balance text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 animate-fade-in-up [animation-delay:200ms]">
+            The AI-powered church platform that gives your team{" "}
+            <span className="text-gradient-accent relative inline-block">
+              time back
               <svg className="absolute w-full h-3 -bottom-1 left-0 text-accent-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
               </svg>
-            </span>
+            </span>{" "}
+            for ministry
           </h1>
 
           <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto animate-fade-in-up [animation-delay:400ms]">
-            Church management software that feels like a ministry partner. From serving people to equipping teams, Relius helps you focus on what matters most.
+            Save 10+ hours weekly on content, scheduling, and admin—so you can focus on people. From serving members to equipping teams, Relius helps you do what matters most.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 w-full sm:w-auto animate-fade-in-up [animation-delay:600ms]">
@@ -55,9 +64,9 @@ export function Hero() {
               className="h-14 px-8 text-lg rounded-full group border-2"
               asChild
             >
-              <Link href="#features" className="flex items-center gap-2">
-                <PlayCircle className="w-5 h-5 text-slate-400 group-hover:text-accent-500 transition-colors" />
-                How It Works
+              <Link href="/switch" className="flex items-center gap-2">
+                <RefreshCw className="w-5 h-5 text-slate-400 group-hover:text-accent-500 transition-colors" />
+                See How Churches Switch
               </Link>
             </Button>
           </div>

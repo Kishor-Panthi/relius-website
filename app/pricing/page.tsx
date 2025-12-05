@@ -15,69 +15,76 @@ export default function PricingPage() {
   const tiers = [
     {
       name: "Basic",
-      description: "Essential tools to serve, equip, and plan",
+      description: "Essential tools for small churches getting started",
       price: {
-        monthly: "$99",
-        annual: "$950",
+        monthly: "$29",
+        annual: "$290",
       },
       popular: false,
+      limits: "Up to 100 members, 50 events, 10 groups",
       features: [
-        "Know your people - profiles, families, groups",
-        "Plan your ministry - events & calendar",
-        "Welcome well - check-ins & attendance",
-        "Track giving - donations & reports",
-        "Coordinate volunteers",
-        "Perfect for up to 500 members",
-        "Email support when you need help",
+        "Member Management & Directory",
+        "Group Management",
+        "Event Calendar",
+        "Donation Tracking",
+        "Check-In System & QR Codes",
+        "Volunteer Scheduling",
+        "Data Migration Wizard",
+        "Email support",
       ],
       notIncluded: [
-        "AI time-saving features",
-        "Advanced insights",
-        "Priority support",
+        "AI Content Studio",
+        "AI Sermon Planner",
+        "AI Pastoral Insights",
+        "Translation Console",
       ],
     },
     {
-      name: "Pro",
-      description: "Everything in Basic + AI to save hours every week",
+      name: "Professional",
+      description: "Everything in Basic + all AI features to save hours weekly",
       price: {
-        monthly: "$299",
-        annual: "$2,900",
+        monthly: "$99",
+        annual: "$990",
       },
       popular: true,
+      limits: "Up to 500 members, 200 events, 50 groups",
       features: [
         "Everything in Basic",
-        "Sermon prep assistance",
-        "Turn sermons into weekly content",
-        "Care insights & follow-up reminders",
-        "Live translation in 50+ languages",
-        "Giving forecasts & donor insights",
-        "Attendance predictions",
-        "Supports up to 2,500 members",
-        "Priority support via email & phone",
+        "AI Content Studio - Turn sermons into content",
+        "AI Sermon Planner - Outline & draft assistance",
+        "AI Pastoral Insights - At-risk detection",
+        "Sentiment Analysis for care requests",
+        "Translation Console - 50+ languages",
+        "Advanced Donor Analytics",
+        "Custom Branding",
+        "Advanced Reporting",
+        "Prayer Request Management",
+        "Priority support (email & phone)",
       ],
       notIncluded: [
-        "Custom integrations",
-        "Dedicated success partner",
+        "API Access",
+        "Multi-site Management",
       ],
     },
     {
       name: "Enterprise",
-      description: "For multi-site churches and custom needs",
+      description: "For large and multi-site churches",
       price: {
-        monthly: "Let's talk",
-        annual: "Let's talk",
+        monthly: "Contact Us",
+        annual: "Contact Us",
       },
       popular: false,
+      limits: "Unlimited members, events, and groups",
       features: [
-        "Everything in Pro",
-        "Multi-site church management",
-        "Custom integrations with your tools",
-        "Advanced reporting & analytics",
-        "Dedicated success partner",
-        "Priority support with SLA",
-        "Custom training for your team",
-        "Unlimited members",
-        "White-label options available",
+        "Everything in Professional",
+        "Multi-site Church Management",
+        "API Access & Custom Integrations",
+        "Single Sign-On (SSO)",
+        "White-labeling Options",
+        "Advanced Security Features",
+        "Dedicated Success Partner",
+        "Custom Training",
+        "Priority Support with SLA",
       ],
       notIncluded: [],
     },
@@ -116,25 +123,48 @@ export default function PricingPage() {
 
   const comparisonFeatures = [
     {
+      category: "Capacity Limits",
+      items: [
+        { name: "Members", basic: "100", pro: "500", enterprise: "Unlimited" },
+        { name: "Events", basic: "50", pro: "200", enterprise: "Unlimited" },
+        { name: "Groups", basic: "10", pro: "50", enterprise: "Unlimited" },
+      ],
+    },
+    {
       category: "Core Features",
       items: [
-        { name: "People Management", basic: true, pro: true, enterprise: true },
-        { name: "Groups & Ministries", basic: true, pro: true, enterprise: true },
-        { name: "Events & Calendar", basic: true, pro: true, enterprise: true },
-        { name: "Basic Giving", basic: true, pro: true, enterprise: true },
-        { name: "Check-ins", basic: true, pro: true, enterprise: true },
-        { name: "Volunteers & Services", basic: true, pro: true, enterprise: true },
+        { name: "Member Management", basic: true, pro: true, enterprise: true },
+        { name: "Group Management", basic: true, pro: true, enterprise: true },
+        { name: "Event Calendar", basic: true, pro: true, enterprise: true },
+        { name: "Donation Tracking", basic: true, pro: true, enterprise: true },
+        { name: "Check-In System", basic: true, pro: true, enterprise: true },
+        { name: "QR Code Generation", basic: true, pro: true, enterprise: true },
+        { name: "Volunteer Scheduling", basic: true, pro: true, enterprise: true },
+        { name: "Data Migration Wizard", basic: true, pro: true, enterprise: true },
       ],
     },
     {
       category: "AI Features",
       items: [
-        { name: "Sermon Generator", basic: false, pro: true, enterprise: true },
-        { name: "Content Studio", basic: false, pro: true, enterprise: true },
-        { name: "Translation Console", basic: false, pro: true, enterprise: true },
-        { name: "Pastoral Care AI", basic: false, pro: true, enterprise: true },
-        { name: "Donations Manager AI", basic: false, pro: true, enterprise: true },
-        { name: "AI Insights Dashboard", basic: false, pro: true, enterprise: true },
+        { name: "AI Content Studio", basic: false, pro: true, enterprise: true },
+        { name: "AI Sermon Planner", basic: false, pro: true, enterprise: true },
+        { name: "AI Pastoral Insights", basic: false, pro: true, enterprise: true },
+        { name: "Sentiment Analysis", basic: false, pro: true, enterprise: true },
+        { name: "Translation Console (50+ languages)", basic: false, pro: true, enterprise: true },
+        { name: "Donor Analytics (AI)", basic: "Basic", pro: "Advanced", enterprise: "Advanced" },
+      ],
+    },
+    {
+      category: "Advanced Features",
+      items: [
+        { name: "Custom Branding", basic: false, pro: true, enterprise: true },
+        { name: "Advanced Reporting", basic: false, pro: true, enterprise: true },
+        { name: "Prayer Request Management", basic: false, pro: true, enterprise: true },
+        { name: "API Access", basic: false, pro: false, enterprise: true },
+        { name: "Custom Integrations", basic: false, pro: false, enterprise: true },
+        { name: "Multi-Site Management", basic: false, pro: false, enterprise: true },
+        { name: "Single Sign-On (SSO)", basic: false, pro: false, enterprise: true },
+        { name: "White-Labeling", basic: false, pro: false, enterprise: true },
       ],
     },
     {
@@ -143,7 +173,7 @@ export default function PricingPage() {
         { name: "Email Support", basic: true, pro: true, enterprise: true },
         { name: "Phone Support", basic: false, pro: true, enterprise: true },
         { name: "Priority Support", basic: false, pro: true, enterprise: true },
-        { name: "Dedicated Account Manager", basic: false, pro: false, enterprise: true },
+        { name: "Dedicated Success Partner", basic: false, pro: false, enterprise: true },
         { name: "Custom Training", basic: false, pro: false, enterprise: true },
         { name: "SLA Guarantee", basic: false, pro: false, enterprise: true },
       ],
@@ -160,24 +190,34 @@ export default function PricingPage() {
           </p>
         </div>
 
+        {/* Migration Banner */}
+        <div className="mb-8 max-w-4xl mx-auto bg-emerald-50 border border-emerald-200 rounded-xl p-6 text-center">
+          <p className="text-emerald-800 font-medium">
+            Switching from another platform?{" "}
+            <Link href="/switch" className="underline hover:text-emerald-900">
+              Get free migration assistance + 30-day extended trial
+            </Link>
+          </p>
+        </div>
+
         {/* Decision helper */}
         <div className="mb-12 max-w-4xl mx-auto bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
           <h3 className="text-lg font-semibold text-slate-900 mb-4 text-center">Which plan is right for your church?</h3>
           <div className="grid md:grid-cols-3 gap-6 text-sm">
             <div className="text-center">
               <div className="font-semibold text-slate-900 mb-2">Basic</div>
-              <p className="text-slate-600">Perfect for churches under 500 members who need solid core features without AI</p>
-              <p className="text-slate-500 text-xs mt-2 italic">Example: Community Church (200 members)</p>
+              <p className="text-slate-600">Perfect for small churches under 100 members who need solid core features</p>
+              <p className="text-slate-500 text-xs mt-2 italic">Example: New Life Chapel (75 members)</p>
             </div>
             <div className="text-center">
-              <div className="font-semibold text-slate-900 mb-2">Pro</div>
-              <p className="text-slate-600">Best for churches wanting to save time with AI assistance and serve 500-2,500 members</p>
-              <p className="text-slate-500 text-xs mt-2 italic">Example: Grace Fellowship (850 members)</p>
+              <div className="font-semibold text-slate-900 mb-2">Professional</div>
+              <p className="text-slate-600">Best for growing churches wanting AI to save 10+ hours weekly</p>
+              <p className="text-slate-500 text-xs mt-2 italic">Example: Grace Fellowship (350 members)</p>
             </div>
             <div className="text-center">
               <div className="font-semibold text-slate-900 mb-2">Enterprise</div>
-              <p className="text-slate-600">Built for multi-site churches or those over 2,500 members needing custom solutions</p>
-              <p className="text-slate-500 text-xs mt-2 italic">Example: City Church Network (4,200 members)</p>
+              <p className="text-slate-600">Built for large or multi-site churches needing custom solutions</p>
+              <p className="text-slate-500 text-xs mt-2 italic">Example: City Church Network (2,500+ members)</p>
             </div>
           </div>
         </div>
@@ -224,13 +264,16 @@ export default function PricingPage() {
                       asChild
                     >
                       {tier.name === "Enterprise" ? (
-                        <Link href="/contact">Let's Talk</Link>
+                        <Link href="/contact">Contact Us</Link>
                       ) : (
                         <a href={tier.name === "Basic" ? CHECKOUT_URLS.BASIC_MONTHLY : CHECKOUT_URLS.PRO_MONTHLY}>
                           Get Started
                         </a>
                       )}
                     </Button>
+                    {tier.limits && (
+                      <p className="text-xs text-slate-500 text-center mb-4">{tier.limits}</p>
+                    )}
                     <ul className="space-y-3">
                       {tier.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2">
@@ -284,13 +327,16 @@ export default function PricingPage() {
                       asChild
                     >
                       {tier.name === "Enterprise" ? (
-                        <Link href="/contact">Let's Talk</Link>
+                        <Link href="/contact">Contact Us</Link>
                       ) : (
                         <a href={tier.name === "Basic" ? CHECKOUT_URLS.BASIC_ANNUAL : CHECKOUT_URLS.PRO_ANNUAL}>
                           Get Started
                         </a>
                       )}
                     </Button>
+                    {tier.limits && (
+                      <p className="text-xs text-slate-500 text-center mb-4">{tier.limits}</p>
+                    )}
                     <ul className="space-y-3">
                       {tier.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2">
@@ -330,7 +376,7 @@ export default function PricingPage() {
                 <tr className="border-b-2 border-gray-200">
                   <th scope="col" className="text-left py-4 px-6 font-semibold">Feature</th>
                   <th scope="col" className="text-center py-4 px-6 font-semibold">Basic</th>
-                  <th scope="col" className="text-center py-4 px-6 font-semibold">Pro</th>
+                  <th scope="col" className="text-center py-4 px-6 font-semibold">Professional</th>
                   <th scope="col" className="text-center py-4 px-6 font-semibold">Enterprise</th>
                 </tr>
               </thead>
@@ -346,21 +392,27 @@ export default function PricingPage() {
                       <tr key={index} className="border-b border-gray-200">
                         <td className="py-3 px-6">{item.name}</td>
                         <td className="py-3 px-6 text-center">
-                          {item.basic ? (
+                          {typeof item.basic === "string" ? (
+                            <span className="text-sm font-medium text-slate-700">{item.basic}</span>
+                          ) : item.basic ? (
                             <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
                           ) : (
                             <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
                           )}
                         </td>
                         <td className="py-3 px-6 text-center">
-                          {item.pro ? (
+                          {typeof item.pro === "string" ? (
+                            <span className="text-sm font-medium text-slate-700">{item.pro}</span>
+                          ) : item.pro ? (
                             <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
                           ) : (
                             <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
                           )}
                         </td>
                         <td className="py-3 px-6 text-center">
-                          {item.enterprise ? (
+                          {typeof item.enterprise === "string" ? (
+                            <span className="text-sm font-medium text-slate-700">{item.enterprise}</span>
+                          ) : item.enterprise ? (
                             <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
                           ) : (
                             <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />

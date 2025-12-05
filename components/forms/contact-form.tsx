@@ -1,18 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+const CURRENT_SOFTWARE_OPTIONS = [
+  { value: "", label: "Select current software" },
+  { value: "planning-center", label: "Planning Center" },
+  { value: "churchtrac", label: "ChurchTrac" },
+  { value: "tithely", label: "Tithe.ly" },
+  { value: "breeze", label: "Breeze" },
+  { value: "ccb", label: "Church Community Builder" },
+  { value: "elvanto", label: "Elvanto" },
+  { value: "spreadsheets", label: "Spreadsheets / Manual" },
+  { value: "other", label: "Other" },
+  { value: "none", label: "No current software" },
+] as const;
+
+const PRIMARY_INTEREST_OPTIONS = [
+  { value: "", label: "Select primary interest" },
+  { value: "general-demo", label: "General demo" },
+  { value: "migration-help", label: "Migration assistance" },
+  { value: "pricing-questions", label: "Pricing questions" },
+  { value: "ai-features", label: "AI features" },
+  { value: "multi-site", label: "Multi-site/Enterprise" },
+] as const;
+
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   church: z.string().min(2, "Church name is required"),
   memberSize: z.string().min(1, "Please select a size"),
-  currentTools: z.string().optional(),
+  currentSoftware: z.string().optional(),
+  primaryInterest: z.string().optional(),
   goals: z.string().min(10, "Please tell us a bit more about your goals"),
   honeypot: z.string().max(0),
 });
@@ -22,15 +46,38 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const searchParams = useSearchParams();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
+
+  // Pre-populate from URL params (e.g., /contact?from=planning-center&interest=migration-help)
+  useEffect(() => {
+    const fromParam = searchParams.get("from");
+    const interestParam = searchParams.get("interest");
+
+    if (fromParam) {
+      // Check if the value matches one of our options
+      const validOption = CURRENT_SOFTWARE_OPTIONS.find(opt => opt.value === fromParam);
+      if (validOption) {
+        setValue("currentSoftware", fromParam);
+      }
+    }
+
+    if (interestParam) {
+      const validInterest = PRIMARY_INTEREST_OPTIONS.find(opt => opt.value === interestParam);
+      if (validInterest) {
+        setValue("primaryInterest", interestParam);
+      }
+    }
+  }, [searchParams, setValue]);
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
@@ -152,16 +199,37 @@ export function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="currentTools" className="block text-sm font-medium text-gray-700 mb-2">
-              Current Tools (Optional)
+            <label htmlFor="currentSoftware" className="block text-sm font-medium text-gray-700 mb-2">
+              Current Software (Optional)
             </label>
-            <input
-              {...register("currentTools")}
-              type="text"
-              id="currentTools"
+            <select
+              {...register("currentSoftware")}
+              id="currentSoftware"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              placeholder="Planning Center, Excel, etc."
-            />
+            >
+              {CURRENT_SOFTWARE_OPTIONS.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="primaryInterest" className="block text-sm font-medium text-gray-700 mb-2">
+              Primary Interest (Optional)
+            </label>
+            <select
+              {...register("primaryInterest")}
+              id="primaryInterest"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            >
+              {PRIMARY_INTEREST_OPTIONS.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div>

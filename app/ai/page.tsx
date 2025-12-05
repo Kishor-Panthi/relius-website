@@ -3,11 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Brain, Shield, Users, CheckCircle2 } from "lucide-react";
+import { Brain, Shield, Users, CheckCircle2, Clock, X, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Features",
-  description: "Discover how Relius uses artificial intelligence to help churches save time, improve engagement, and focus on ministry.",
+  title: "AI Features | Relius Church Management",
+  description: "Save 10+ hours weekly with AI-powered content creation, pastoral care insights, and sermon planning. Features competitors don't have.",
 };
 
 export default function AiPage() {
@@ -38,8 +38,27 @@ export default function AiPage() {
           </Badge>
           <h1 className="mb-4">AI That Serves Your Mission</h1>
           <p className="text-xl text-slate-500 max-w-3xl mx-auto">
-            Relius uses artificial intelligence to help church leaders save time on administrative tasks so they can focus on people and ministry.
+            Save 10+ hours weekly with AI that drafts content, spots needs, and handles routine tasks—so you can focus on people and ministry.
           </p>
+        </div>
+
+        {/* Time Savings Section */}
+        <div className="mb-16 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="text-center p-6 bg-white border border-slate-200 rounded-xl">
+            <Clock className="w-8 h-8 text-accent-500 mx-auto mb-3" />
+            <div className="text-3xl font-bold text-slate-900 mb-1">5 min</div>
+            <p className="text-sm text-slate-600">Turn one sermon into 6+ content pieces</p>
+          </div>
+          <div className="text-center p-6 bg-white border border-slate-200 rounded-xl">
+            <Clock className="w-8 h-8 text-accent-500 mx-auto mb-3" />
+            <div className="text-3xl font-bold text-slate-900 mb-1">10+ hrs</div>
+            <p className="text-sm text-slate-600">Saved weekly on admin and content</p>
+          </div>
+          <div className="text-center p-6 bg-white border border-slate-200 rounded-xl">
+            <Clock className="w-8 h-8 text-accent-500 mx-auto mb-3" />
+            <div className="text-3xl font-bold text-slate-900 mb-1">50+</div>
+            <p className="text-sm text-slate-600">Languages supported for live translation</p>
+          </div>
         </div>
 
         <div className="mb-24 bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-12">
@@ -184,6 +203,85 @@ export default function AiPage() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* What Competitors Don't Have */}
+        <div className="mb-24 bg-slate-50 rounded-2xl p-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <Badge variant="secondary" className="mb-4">
+                <Sparkles className="w-3 h-3 mr-1" />
+                Unique to Relius
+              </Badge>
+              <h2 className="mb-4">AI Features Competitors Don't Have</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto">
+                Most church software offers basic tools. Relius was built AI-first, with capabilities you won't find anywhere else.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <h3 className="text-lg font-semibold text-slate-900 mb-4">Planning Center, ChurchTrac, Tithe.ly</h3>
+                <ul className="space-y-3 text-sm">
+                  <li className="flex items-center gap-2 text-slate-500">
+                    <X className="w-4 h-4 text-slate-300" />
+                    No AI content generation
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-500">
+                    <X className="w-4 h-4 text-slate-300" />
+                    No sermon-to-content pipeline
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-500">
+                    <X className="w-4 h-4 text-slate-300" />
+                    No at-risk member detection
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-500">
+                    <X className="w-4 h-4 text-slate-300" />
+                    No real-time translation
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-500">
+                    <X className="w-4 h-4 text-slate-300" />
+                    No AI volunteer scheduling
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-500">
+                    <X className="w-4 h-4 text-slate-300" />
+                    No predictive giving analytics
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-accent-50 rounded-xl p-6 border border-accent-200">
+                <h3 className="text-lg font-semibold text-slate-900 mb-4">Relius</h3>
+                <ul className="space-y-3 text-sm">
+                  <li className="flex items-center gap-2 text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-accent-600" />
+                    <strong>Content Studio</strong> - One sermon → 6+ formats
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-accent-600" />
+                    <strong>Sermon Planner</strong> - AI-assisted outlines
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-accent-600" />
+                    <strong>Pastoral Care AI</strong> - At-risk alerts
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-accent-600" />
+                    <strong>Translation Console</strong> - 50+ languages
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-accent-600" />
+                    <strong>Smart Scheduling</strong> - Burnout detection
+                  </li>
+                  <li className="flex items-center gap-2 text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-accent-600" />
+                    <strong>Giving Insights</strong> - Donor retention AI
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-center text-sm text-slate-500 mt-8">
+              AI drafts, you decide. Every AI feature includes human review before anything goes out.
+            </p>
           </div>
         </div>
 

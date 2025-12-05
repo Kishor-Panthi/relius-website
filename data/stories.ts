@@ -30,6 +30,10 @@ export type Story = {
   implementation: string[];
   results: string[];
   advice: string;
+  // Migration-specific fields
+  previousPlatform?: string;
+  migrationTime?: string;
+  dataPreserved?: string[];
 };
 
 export const stories: Story[] = [
@@ -76,6 +80,9 @@ export const stories: Story[] = [
       "New volunteers are onboarded with a simple welcome workflow",
     ],
     advice: "Start small. Pick one ministry team, build the workflow in Relius, and celebrate the quick win.",
+    previousPlatform: "Planning Center",
+    migrationTime: "2.5 hours",
+    dataPreserved: ["150 member records", "3 years giving history"],
   },
   {
     slug: "midtown-fellowship",
@@ -120,6 +127,9 @@ export const stories: Story[] = [
       "Staff trust data because it feels like their language",
     ],
     advice: "Name a care coordinator who owns data health. Relius makes it easy, but ownership keeps it meaningful.",
+    previousPlatform: "ChurchTrac",
+    migrationTime: "3 hours",
+    dataPreserved: ["700 member records", "5 years giving history", "Family relationships"],
   },
   {
     slug: "renew-family-church",
@@ -164,6 +174,9 @@ export const stories: Story[] = [
       "New service launches feel planned, not panicked",
     ],
     advice: "Use Relius tags for equipment and rooms. It saved us from double-booking our only baptistry.",
+    previousPlatform: "Tithe.ly",
+    migrationTime: "4 hours",
+    dataPreserved: ["1,200 member records", "2 years giving history", "Tags and segments"],
   },
   {
     slug: "harborlight-community",

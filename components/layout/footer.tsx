@@ -11,11 +11,11 @@ export function Footer() {
       { name: "Integrations", href: "/integrations" },
       { name: "Security", href: "/security" },
     ],
-    company: [
-      { name: "About", href: "/about" },
-      { name: "Contact", href: "/contact" },
-      { name: "Book a Demo", href: "/contact" },
-      { name: "Careers", href: "/careers" },
+    switchToRelius: [
+      { name: "Migration Hub", href: "/switch" },
+      { name: "Planning Center Alternative", href: "/switch/planning-center" },
+      { name: "ChurchTrac Alternative", href: "/switch/churchtrac" },
+      { name: "Tithe.ly Alternative", href: "/switch/tithely" },
     ],
     resources: [
       { name: "Stories", href: "/stories" },
@@ -24,10 +24,12 @@ export function Footer() {
       { name: "Blog", href: "/blog" },
       { name: "Support", href: "/contact" },
     ],
-    legal: [
+    company: [
+      { name: "About", href: "/about" },
+      { name: "Contact", href: "/contact" },
+      { name: "Book a Demo", href: "/contact" },
       { name: "Privacy Policy", href: "/privacy" },
       { name: "Terms of Service", href: "/terms" },
-      { name: "Cookie Policy", href: "/cookies" },
     ],
   };
 
@@ -95,9 +97,9 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-4">Company</h3>
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">Switch to Relius</h3>
               <ul className="space-y-3">
-                {footerLinks.company.map((link) => (
+                {footerLinks.switchToRelius.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -127,9 +129,9 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-4">Legal</h3>
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">Company</h3>
               <ul className="space-y-3">
-                {footerLinks.legal.map((link) => (
+                {footerLinks.company.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}

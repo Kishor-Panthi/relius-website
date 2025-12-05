@@ -7,7 +7,7 @@ export function WhyRelius() {
     {
       icon: Heart,
       title: "Serve Your People",
-      description: "Know your members better so you can care for them better. Track pastoral care, prayer requests, and life events in one place.",
+      description: "Catch people before they drift away with AI-powered care alerts. Track pastoral care, prayer requests, and life events—and get prompted when someone needs attention.",
       image: "/images/illustrations/care-support.png",
       color: "text-rose-500",
       bg: "bg-rose-50",
@@ -17,7 +17,7 @@ export function WhyRelius() {
     {
       icon: Users,
       title: "Equip Your Teams",
-      description: "Coordinate volunteers, organize groups, and communicate effortlessly. Everyone knows their role and feels connected.",
+      description: "End the Sunday morning scramble. AI-assisted scheduling finds the right volunteers, detects burnout, and keeps everyone connected and confirmed.",
       image: "/images/illustrations/volunteer-coordination.png",
       color: "text-blue-500",
       bg: "bg-blue-50",
@@ -27,7 +27,7 @@ export function WhyRelius() {
     {
       icon: Calendar,
       title: "Plan Your Ministry",
-      description: "From weekly services to annual events, manage everything seamlessly. Set it up once, and Relius remembers.",
+      description: "Turn one sermon into a week of content. AI transforms your message into emails, social posts, and study guides—all in your voice.",
       image: "/images/illustrations/growth-planning.png",
       color: "text-amber-500",
       bg: "bg-amber-50",
@@ -37,7 +37,7 @@ export function WhyRelius() {
     {
       icon: HandHeart,
       title: "Grow Your Impact",
-      description: "Track giving with transparency, understand engagement trends, and make informed decisions that strengthen your ministry.",
+      description: "See who's drifting and who's thriving. Predictive analytics help you understand giving trends and engagement—so you can act before it's too late.",
       image: "/images/illustrations/ministry-moments.png",
       color: "text-emerald-500",
       bg: "bg-emerald-50",

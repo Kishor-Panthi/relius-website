@@ -1,12 +1,12 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, RefreshCw, Clock } from "lucide-react";
 
 export function SocialProof() {
   const stats = [
-    "Serving churches from 50 to 5,000+ members",
-    "Ministry-first, technology-second",
-    "Designed with pastors and church staff",
+    { text: "Serving churches from 50 to 5,000+ members", icon: null },
+    { text: "Average migration time: 2-3 hours", icon: Clock },
+    { text: "Ministry-first, technology-second", icon: null },
   ];
 
   const testimonials = [
@@ -18,6 +18,7 @@ export function SocialProof() {
       size: "850 members",
       initials: "SM",
       color: "bg-rose-100 text-rose-600",
+      switchedFrom: "Planning Center",
     },
     {
       quote: "I was skeptical about church software with AI, but it's not about replacing ministry—it helps me serve better. The pastoral care insights helped us reach out to three families going through hard times we might have missed.",
@@ -27,6 +28,7 @@ export function SocialProof() {
       size: "320 members",
       initials: "MT",
       color: "bg-blue-100 text-blue-600",
+      switchedFrom: null,
     },
     {
       quote: "Our team ranges from tech-savvy millennials to volunteers who barely use email. Everyone adapted to Relius in days, not months. That's how you know it's designed well.",
@@ -36,6 +38,7 @@ export function SocialProof() {
       size: "1,200 members",
       initials: "DC",
       color: "bg-emerald-100 text-emerald-600",
+      switchedFrom: "ChurchTrac",
     },
   ];
 
@@ -44,11 +47,15 @@ export function SocialProof() {
       <div className="container-width relative z-10">
         <div className="text-center mb-16">
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {stats.map((stat, index) => (
-              <Badge key={index} variant="secondary" className="px-4 py-1.5 text-sm font-medium bg-slate-50 text-slate-600 border-slate-200">
-                {stat}
-              </Badge>
-            ))}
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <Badge key={index} variant="secondary" className="px-4 py-1.5 text-sm font-medium bg-slate-50 text-slate-600 border-slate-200 flex items-center gap-1.5">
+                  {Icon && <Icon className="w-3.5 h-3.5" />}
+                  {stat.text}
+                </Badge>
+              );
+            })}
           </div>
           <h2 className="text-balance mb-6 text-slate-900 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             Real churches, <span className="text-gradient-accent">real stories</span>
@@ -62,10 +69,18 @@ export function SocialProof() {
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border border-slate-100 bg-white shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
               <CardContent className="p-8 flex flex-col h-full">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                  {testimonial.switchedFrom && (
+                    <Badge variant="secondary" className="text-xs bg-accent-50 text-accent-700 border-accent-200 flex items-center gap-1">
+                      <RefreshCw className="w-3 h-3" />
+                      From {testimonial.switchedFrom}
+                    </Badge>
+                  )}
                 </div>
 
                 <Quote className="w-10 h-10 text-slate-200 mb-4" />
