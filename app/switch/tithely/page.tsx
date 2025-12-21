@@ -22,8 +22,8 @@ export default function TithelyMigrationPage() {
     <main className="pt-24">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
-        <div className="absolute inset-0 bg-pattern-grid opacity-[0.03]" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-30 -z-10" />
+        <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-30 -z-10 pointer-events-none" />
 
         <div className="container-width px-6 lg:px-8">
           <Link
