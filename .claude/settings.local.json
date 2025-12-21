@@ -24,7 +24,9 @@
       "Bash(if exist node_modules rmdir /s /q node_modules)",
       "Bash(if exist package-lock.json del package-lock.json)",
       "Bash(xargs cat:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(dir /b \"c:\\\\Users\\\\Kishor\\\\relius-website\\\\public\\\\images\\\\blog\"\")",
+      "Bash(tasklist:*)"
     ],
     "deny": [],
     "ask": []

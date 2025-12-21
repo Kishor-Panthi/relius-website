@@ -18,7 +18,7 @@ export function WhyRelius() {
       icon: Users,
       title: "Equip Your Teams",
       description: "End the Sunday morning scramble. AI-assisted scheduling finds the right volunteers, detects burnout, and keeps everyone connected and confirmed.",
-      image: "/images/illustrations/volunteer-coordination.png",
+      image: "/images/illustrations/team-puzzle.png",
       color: "text-blue-500",
       bg: "bg-blue-50",
       border: "group-hover:border-blue-200",
