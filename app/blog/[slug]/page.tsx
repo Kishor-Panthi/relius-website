@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogPost } from "@/data/blog-posts";
 import { StoryIllustration } from "@/components/illustrations";
@@ -62,8 +63,20 @@ export default function BlogPostPage({ params }: BlogPageProps) {
           </div>
         </header>
 
-        <div className="rounded-3xl border border-slate-200 bg-white p-6">
-          <StoryIllustration type="ministry" className="w-full" title="Blog illustration" />
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 overflow-hidden relative">
+          {post.image ? (
+            <div className="relative h-64 w-full rounded-2xl overflow-hidden">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          ) : (
+            <StoryIllustration type="ministry" className="w-full" title="Blog illustration" />
+          )}
         </div>
 
         <article className="space-y-10 text-slate-700 leading-relaxed">

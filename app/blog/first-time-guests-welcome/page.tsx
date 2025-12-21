@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Clock, Calendar, Coffee, MessageCircle, UserPlus, Heart } from 'lucide-react';
 
 export const metadata = {
@@ -40,8 +41,14 @@ export default function FirstTimeGuestsPage() {
         - Style: Authentic, high-quality photography.
         - Alt text: Welcoming a guest at church
       */}
-            <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100 flex items-center justify-center text-slate-400">
-                [Hero Image: Warm Welcome]
+            <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100">
+                <Image
+                    src="/images/blog/first-time-guests-welcome.png"
+                    alt="Welcoming a guest at church"
+                    fill
+                    className="object-cover"
+                    priority
+                />
             </div>
 
             <div className="prose prose-lg prose-slate max-w-none">

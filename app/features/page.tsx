@@ -49,20 +49,6 @@ export default function FeaturesPage() {
               height={400}
               className="relative z-10 w-full h-auto object-contain"
             />
-            <div className="relative z-10 mt-6 grid gap-4">
-              <div className="rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-sm px-4 py-3 flex items-center justify-between">
-                <div>
-                  <p className="text-xs uppercase text-slate-500 tracking-wide">Upcoming Sunday</p>
-                  <p className="text-lg font-semibold text-slate-900">3 services | 9 teams ready</p>
-                </div>
-                <span className="text-xs font-semibold text-primary-700 bg-primary-50 px-3 py-1 rounded-full">No conflicts</span>
-              </div>
-              <div className="rounded-2xl border border-primary/30 bg-primary-50/40 px-4 py-3">
-                <p className="text-xs uppercase text-primary-700 tracking-wide">Volunteer health</p>
-                <p className="text-2xl font-bold text-slate-900">96%</p>
-                <p className="text-sm text-slate-600">Serving rotations balanced this month</p>
-              </div>
-            </div>
           </div>
         </div>
 

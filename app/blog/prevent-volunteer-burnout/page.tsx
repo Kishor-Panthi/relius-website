@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle, Clock, Calendar, Users, Sparkles } from 'lucide-react';
 
 export const metadata = {
@@ -43,8 +44,14 @@ export default function PreventVolunteerBurnout() {
         - Recommended: Unsplash search "church volunteers serving" or "community helpers diverse"
         - Alt text: Church volunteers working together with joy
       */}
-            <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100 flex items-center justify-center text-slate-400">
-                [Hero Image: Volunteers serving together]
+            <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100">
+                <Image
+                    src="/images/blog/prevent-volunteer-burnout.png"
+                    alt="Volunteers serving together with joy"
+                    fill
+                    className="object-cover"
+                    priority
+                />
             </div>
 
             {/* Article Content */}

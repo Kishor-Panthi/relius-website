@@ -16,6 +16,7 @@ export type BlogPost = {
   }[];
   takeaway: string[];
   quote?: string;
+  image?: string;
 };
 
 export const blogPosts: BlogPost[] = [
@@ -60,6 +61,7 @@ export const blogPosts: BlogPost[] = [
       "Thank people with stories, not stats.",
     ],
     quote: "When volunteers know there's an exit ramp, they stay longer because they trust you'll notice before they're exhausted.",
+    image: "/images/blog/prevent-volunteer-burnout.png",
   },
   {
     slug: "why-church-software-fails",
@@ -101,6 +103,7 @@ export const blogPosts: BlogPost[] = [
       "People vocab should lead priorities.",
       "Choose relationship over hype.",
     ],
+    image: "/images/blog/why-church-software-fails.png",
   },
   {
     slug: "first-time-guests-welcome",
@@ -142,6 +145,7 @@ export const blogPosts: BlogPost[] = [
       "Personal invitations beat general ones.",
       "Shared dashboards keep teams accountable.",
     ],
+    image: "/images/blog/first-time-guests-welcome.png",
   },
   {
     slug: "church-200-vs-2000",
@@ -181,6 +185,7 @@ export const blogPosts: BlogPost[] = [
       "Segment communication as you grow.",
       "Log instincts so you can measure them later.",
     ],
+    image: "/images/blog/church-200-vs-2000.png",
   },
   {
     slug: "ai-changing-church-administration",
@@ -220,6 +225,7 @@ export const blogPosts: BlogPost[] = [
       "Your voice is part of your theology.",
       "Use AI to remove admin work, not to replace humans.",
     ],
+    image: "/images/blog/ai-changing-church-administration.png",
   },
   {
     slug: "why-churches-switching-planning-center-2025",
@@ -273,6 +279,7 @@ export const blogPosts: BlogPost[] = [
       "Migration takes hours, not months.",
     ],
     quote: "I was nervous about the switch. Then I realized I'd spent more time worrying about migration than the migration actually took.",
+    image: "/images/blog/why-churches-switching-planning-center-2025.png",
   },
   {
     slug: "planning-center-vs-relius-honest-comparison",
@@ -326,6 +333,7 @@ export const blogPosts: BlogPost[] = [
       "Pricing: Relius is simpler and often cheaper at scale.",
       "Switching cost is real-but so is staying stuck.",
     ],
+    image: "/images/blog/planning-center-vs-relius-honest-comparison.png",
   },
   {
     slug: "evaluate-church-management-software-checklist",
@@ -400,6 +408,7 @@ export const blogPosts: BlogPost[] = [
       "Use the checklist to stay objective.",
     ],
     quote: "The best church software is the one your team actually uses. Everything else is just potential.",
+    image: "/images/blog/evaluate-church-management-software-checklist.png",
   },
 ];
 

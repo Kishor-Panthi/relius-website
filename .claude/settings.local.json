@@ -22,7 +22,9 @@
       "Bash(echo:*)",
       "Bash(npx next build)",
       "Bash(if exist node_modules rmdir /s /q node_modules)",
-      "Bash(if exist package-lock.json del package-lock.json)"
+      "Bash(if exist package-lock.json del package-lock.json)",
+      "Bash(xargs cat:*)",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []

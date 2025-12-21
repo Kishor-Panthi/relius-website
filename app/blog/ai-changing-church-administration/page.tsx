@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Sparkles, Brain, MessageSquare, Heart, Zap, Shield } from 'lucide-react';
 
 export const metadata = {
@@ -40,8 +41,14 @@ export default function AiInMinistryPage() {
         - Style: Futuristic but warm, not cold/robotic.
         - Alt text: AI as a ministry assistant
       */}
-            <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100 flex items-center justify-center text-slate-400">
-                [Illustration: AI Assistant]
+            <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100">
+                <Image
+                    src="/images/blog/ai-changing-church-administration.png"
+                    alt="AI as a ministry assistant illustration"
+                    fill
+                    className="object-cover"
+                    priority
+                />
             </div>
 
             <div className="prose prose-lg prose-slate max-w-none">

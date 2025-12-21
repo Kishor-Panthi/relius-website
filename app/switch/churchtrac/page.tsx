@@ -241,31 +241,31 @@ export default function ChurchTracMigrationPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 lg:px-8 bg-slate-900">
-        <div className="container-width">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="relative overflow-hidden bg-white py-20 px-6 lg:px-8">
+        <div className="absolute inset-0 bg-pattern-dots opacity-10" aria-hidden="true" />
+        <div className="relative z-10 mx-auto max-w-4xl">
+          <div className="rounded-2xl border border-slate-200 bg-white px-8 py-12 text-center shadow-xl sm:px-16 sm:py-16">
+            <h2 className="text-balance mb-4 text-slate-900 text-3xl sm:text-4xl font-bold">
               Ready to switch from {platform.name}?
             </h2>
-            <p className="text-xl text-slate-300 mb-10">
+            <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
               Start your free trial and bring your church data with you. Our team is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                variant="primary"
+                variant="accent"
                 size="lg"
-                className="bg-white text-slate-900 hover:bg-slate-100 rounded-full"
+                className="group shadow-lg"
                 asChild
               >
                 <Link href={getContactUrlForMigration("churchtrac")}>
                   Start Your Migration
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-slate-600 text-white hover:bg-slate-800 rounded-full"
                 asChild
               >
                 <Link href="/pricing">
