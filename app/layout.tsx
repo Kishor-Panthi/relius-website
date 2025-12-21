@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     template: "%s | Relius",
   },
   description: "Relius is the ministry partner platform for churches - care for people, coordinate volunteers, plan services, and save time with AI-powered tools.",
+  icons: {
+    icon: "/relius_emblem_circle.png",
+    apple: "/relius_emblem_circle.png",
+  },
   keywords: [
     "church management software",
     "ministry software",
