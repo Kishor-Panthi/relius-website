@@ -63,14 +63,14 @@ export default function AboutPage() {
               />
               <div className="mt-6 grid gap-4">
                 <div className="rounded-2xl border border-primary-100 bg-primary-50/50 px-4 py-3">
-                  <p className="text-xs uppercase font-semibold text-primary-700 tracking-wide">Community snapshot</p>
-                  <p className="text-lg font-semibold text-slate-900">612 people cared for in 2024</p>
-                  <p className="text-sm text-slate-600">Pastoral notes & prayer follow ups recorded</p>
+                  <p className="text-xs uppercase font-semibold text-primary-700 tracking-wide">Pastoral Care</p>
+                  <p className="text-lg font-semibold text-slate-900">Track every prayer request</p>
+                  <p className="text-sm text-slate-600">Log notes, set follow-up reminders, and ensure no one is forgotten</p>
                 </div>
                 <div className="rounded-2xl border border-slate-200 px-4 py-3 flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-slate-500">Response time</p>
-                    <p className="text-lg font-semibold text-slate-900">Under 6 hours</p>
+                    <p className="text-sm text-slate-500">Built-in reminders</p>
+                    <p className="text-lg font-semibold text-slate-900">Never miss a follow-up</p>
                   </div>
                   <span className="text-xs font-semibold text-accent-700 bg-accent-50 px-3 py-1 rounded-full">Care & Support</span>
                 </div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 <GrowthPlanningIllustration className="w-full" title="Planning ahead illustration" />
               </div>
               <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-                We're just getting started. Relius is currently in beta, and we're actively working with churches to refine and improve every aspect of the platform.
+                We're just getting started. We're actively working with churches to refine and improve every aspect of the platform.
               </p>
               <div className="space-y-6">
                 <div>
@@ -160,7 +160,7 @@ export default function AboutPage() {
         <div className="text-center bg-white border border-slate-200 rounded-2xl p-12 shadow-sm">
           <h2 className="mb-4 text-2xl font-bold text-slate-900">Let's talk about your church</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            We're in beta and learning every day. Whether you're interested in trying Relius or just want to share what your church needs, we'd love to hear from you.
+            We're learning every day. Whether you're interested in trying Relius or just want to share what your church needs, we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="primary" size="lg" asChild>

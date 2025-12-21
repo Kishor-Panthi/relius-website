@@ -1,44 +1,31 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, Star, RefreshCw, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Heart, Users, Sparkles, Clock, ArrowRight, Shield, Zap } from "lucide-react";
 
 export function SocialProof() {
-  const stats = [
-    { text: "Serving churches from 50 to 5,000+ members", icon: null },
-    { text: "Average migration time: 2-3 hours", icon: Clock },
-    { text: "Ministry-first, technology-second", icon: null },
+  const highlights = [
+    { text: "Built for churches of all sizes", icon: Users },
+    { text: "Migrations typically take 2-4 hours", icon: Clock },
+    { text: "Ministry-first, technology-second", icon: Heart },
   ];
 
-  const testimonials = [
+  const capabilities = [
     {
-      quote: "Before Relius, our volunteer coordinator spent 5 hours every week making schedules. Now it takes 30 minutes, and she spends that saved time actually connecting with volunteers.",
-      author: "Sarah Martinez",
-      role: "Operations Pastor",
-      church: "New Hope Community Church",
-      size: "850 members",
-      initials: "SM",
-      color: "bg-rose-100 text-rose-600",
-      switchedFrom: "Planning Center",
+      icon: Users,
+      title: "Volunteer Coordination",
+      description: "Smart scheduling, burnout detection, and one-click confirmations that save hours every week.",
     },
     {
-      quote: "I was skeptical about church software with AI, but it's not about replacing ministry—it helps me serve better. The pastoral care insights helped us reach out to three families going through hard times we might have missed.",
-      author: "Rev. Michael Thompson",
-      role: "Lead Pastor",
-      church: "Grace Fellowship",
-      size: "320 members",
-      initials: "MT",
-      color: "bg-blue-100 text-blue-600",
-      switchedFrom: null,
+      icon: Heart,
+      title: "Pastoral Care",
+      description: "Track prayer requests, log visits, and ensure no one falls through the cracks.",
     },
     {
-      quote: "Our team ranges from tech-savvy millennials to volunteers who barely use email. Everyone adapted to Relius in days, not months. That's how you know it's designed well.",
-      author: "David Chen",
-      role: "Church Administrator",
-      church: "City Church Downtown",
-      size: "1,200 members",
-      initials: "DC",
-      color: "bg-emerald-100 text-emerald-600",
-      switchedFrom: "ChurchTrac",
+      icon: Zap,
+      title: "AI-Powered Tools",
+      description: "Generate sermon content, translate in real-time, and get insights that help you serve better.",
     },
   ];
 
@@ -47,62 +34,105 @@ export function SocialProof() {
       <div className="container-width relative z-10">
         <div className="text-center mb-16">
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
+            {highlights.map((highlight, index) => {
+              const Icon = highlight.icon;
               return (
                 <Badge key={index} variant="secondary" className="px-4 py-1.5 text-sm font-medium bg-slate-50 text-slate-600 border-slate-200 flex items-center gap-1.5">
-                  {Icon && <Icon className="w-3.5 h-3.5" />}
-                  {stat.text}
+                  <Icon className="w-3.5 h-3.5" />
+                  {highlight.text}
                 </Badge>
               );
             })}
           </div>
           <h2 className="text-balance mb-6 text-slate-900 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            Real churches, <span className="text-gradient-accent">real stories</span>
+            Built for <span className="text-gradient-accent">real ministry</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            See how church leaders are using Relius to spend less time on logistics and more time on ministry.
+            Relius is designed to help church teams spend less time on logistics and more time on the people they serve.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border border-slate-100 bg-white shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
-              <CardContent className="p-8 flex flex-col h-full">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                    ))}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {capabilities.map((capability, index) => {
+            const Icon = capability.icon;
+            return (
+              <Card key={index} className="border border-slate-100 bg-white shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-8">
+                  <div className="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mb-6">
+                    <Icon className="w-6 h-6 text-primary-600" />
                   </div>
-                  {testimonial.switchedFrom && (
-                    <Badge variant="secondary" className="text-xs bg-accent-50 text-accent-700 border-accent-200 flex items-center gap-1">
-                      <RefreshCw className="w-3 h-3" />
-                      From {testimonial.switchedFrom}
-                    </Badge>
-                  )}
-                </div>
-
-                <Quote className="w-10 h-10 text-slate-200 mb-4" />
-
-                <p className="text-slate-700 mb-8 leading-relaxed text-lg flex-1">
-                  "{testimonial.quote}"
-                </p>
-
-                <div className="flex items-center gap-4 pt-6 border-t border-slate-50">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm ${testimonial.color}`}>
-                    {testimonial.initials}
-                  </div>
-                  <div>
-                    <p className="font-bold text-slate-900">{testimonial.author}</p>
-                    <p className="text-sm text-slate-500">{testimonial.role}</p>
-                    <p className="text-xs text-slate-600 mt-0.5">{testimonial.church} • {testimonial.size}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{capability.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{capability.description}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
+
+        <Card className="border border-primary/20 bg-gradient-to-br from-primary-50 to-white shadow-lg">
+          <CardContent className="p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="flex items-center gap-2 mb-4">
+                  <Sparkles className="w-5 h-5 text-primary-600" />
+                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-600">Join Our Founding Churches</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                  Be part of shaping the future of church software
+                </h3>
+                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                  We're building Relius with input from church leaders who understand that ministry software should feel pastoral, not corporate. As a founding church, you'll help shape the features and experience.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button variant="gradient" asChild>
+                    <Link href="/contact" className="flex items-center gap-2">
+                      Schedule a Conversation <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </Button>
+                  <Button variant="secondary" asChild>
+                    <Link href="/features">Explore Features</Link>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl border border-slate-200 p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
+                      <Shield className="w-5 h-5 text-primary-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900 mb-1">Your Data, Your Ministry</h4>
+                      <p className="text-sm text-slate-600">Migrate your existing data easily. Nothing gets lost in translation.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl border border-slate-200 p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-accent-100 flex items-center justify-center flex-shrink-0">
+                      <Heart className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900 mb-1">Partnership, Not Just Software</h4>
+                      <p className="text-sm text-slate-600">We're committed to growing with your church for the long haul.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl border border-slate-200 p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                      <Users className="w-5 h-5 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900 mb-1">Built With Churches</h4>
+                      <p className="text-sm text-slate-600">Every feature shaped by real church leaders and their actual needs.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

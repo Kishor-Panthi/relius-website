@@ -180,6 +180,6 @@ export const commonQuestions = [
   },
   {
     question: "How do I ask questions or request features?",
-    answer: "Email care@relius.com or message us in-app. We host monthly roadmap calls and reply with realistic timelines.",
+    answer: "Email support@relius.ai or message us in-app. We host monthly roadmap calls and reply with realistic timelines.",
   },
 ];

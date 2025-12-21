@@ -85,7 +85,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Measure burden, not features",
         body: [
           "Feature checklists reward complexity. Ministry rewards clarity. Map the top five things you actually do each week and see if the workflow is lighter.",
-          "During beta, we track how many clicks it takes to do pastoral notes. If it creeps up, we change the UI.",
+          "We track how many clicks it takes to do pastoral notes. If it creeps up, we change the UI.",
         ],
       },
       {

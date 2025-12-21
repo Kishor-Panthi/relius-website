@@ -18,7 +18,7 @@ export function Footer() {
       { name: "Tithe.ly Alternative", href: "/switch/tithely" },
     ],
     resources: [
-      { name: "Stories", href: "/stories" },
+      { name: "Use Cases", href: "/use-cases" },
       { name: "Resources", href: "/resources" },
       { name: "Documentation", href: "/docs" },
       { name: "Blog", href: "/blog" },

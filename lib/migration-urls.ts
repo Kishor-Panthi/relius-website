@@ -74,5 +74,5 @@ export const CONTACT_FROM_PLATFORMS = {
 
 // Generate contact URL with platform pre-selected
 export function getContactUrlForMigration(platformSlug: string): string {
-  return `/contact?from=${platformSlug}&interest=migration`;
+  return `/contact?from=${platformSlug}&interest=migration-help`;
 }

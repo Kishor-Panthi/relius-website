@@ -17,7 +17,7 @@ export default function NotFound() {
             <Link href="/">Back home</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link href="/stories">Read church stories</Link>
+            <Link href="/use-cases">Explore use cases</Link>
           </Button>
           <Button variant="secondary" asChild>
             <Link href="/resources">Resources hub</Link>

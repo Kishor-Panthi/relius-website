@@ -138,7 +138,7 @@ export default function ResourcesPage() {
               <Button variant="gradient" asChild>
                 <Link href="/docs">Open Help Center</Link>
               </Button>
-              <p className="text-sm text-slate-500 mt-3">Prefer email? care@relius.com</p>
+              <p className="text-sm text-slate-500 mt-3">Prefer email? support@relius.ai</p>
             </div>
           </div>
         </section>

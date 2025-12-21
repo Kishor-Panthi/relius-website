@@ -99,7 +99,7 @@ export default function BlogPage() {
               <Link href="/contact">Schedule a conversation</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild>
-              <Link href="/stories">See church stories</Link>
+              <Link href="/use-cases">See use cases</Link>
             </Button>
           </div>
         </section>

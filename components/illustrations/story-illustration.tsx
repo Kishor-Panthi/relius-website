@@ -8,9 +8,9 @@ import {
   WorshipCelebrationIllustration,
 } from ".";
 import type { IllustrationProps } from "./palette";
-import type { StoryIllustrationKey } from "@/data/stories";
+import type { UseCaseIllustrationKey } from "@/data/use-cases";
 
-const illustrationMap: Record<StoryIllustrationKey, ComponentType<IllustrationProps>> = {
+const illustrationMap: Record<UseCaseIllustrationKey, ComponentType<IllustrationProps>> = {
   community: CommunityConnectionIllustration,
   ministry: MinistryMomentsIllustration,
   volunteer: VolunteerCoordinationIllustration,
@@ -19,11 +19,15 @@ const illustrationMap: Record<StoryIllustrationKey, ComponentType<IllustrationPr
   care: CareSupportIllustration,
 };
 
-export function StoryIllustration({ type, ...rest }: IllustrationProps & { type: StoryIllustrationKey }) {
+export function UseCaseIllustration({ type, ...rest }: IllustrationProps & { type: UseCaseIllustrationKey }) {
   const Illustration = illustrationMap[type];
   return <Illustration {...rest} />;
 }
 
-export function getStoryIllustration(type: StoryIllustrationKey) {
+export function getUseCaseIllustration(type: UseCaseIllustrationKey) {
   return illustrationMap[type];
 }
+
+// Keep old names for backwards compatibility during migration
+export const StoryIllustration = UseCaseIllustration;
+export const getStoryIllustration = getUseCaseIllustration;

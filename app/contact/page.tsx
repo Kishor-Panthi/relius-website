@@ -68,16 +68,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-8">
-              <h3 className="mb-4">Alternative: Calendly Link</h3>
-              <p className="text-slate-500 mb-4">
-                Prefer to schedule directly? Use our Calendly link to book a time that works for you.
-              </p>
-              <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-5 text-center">
-                <p className="text-gray-500 italic">Calendly integration placeholder</p>
-              </div>
-            </div>
-
             <div className="bg-primary-50 border-2 border-primary-200 rounded-xl p-8">
               <h3 className="mb-3">Have Questions First?</h3>
               <p className="text-slate-600 mb-4">
@@ -85,10 +75,10 @@ export default function ContactPage() {
               </p>
               <div className="space-y-2">
                 <p className="font-semibold text-primary">
-                  Email: <a href="mailto:hello@relius.com" className="hover:underline">hello@relius.com</a>
+                  Email: <a href="mailto:contact@relius.ai" className="hover:underline">contact@relius.ai</a>
                 </p>
                 <p className="font-semibold text-primary">
-                  Phone: <a href="tel:+15551234567" className="hover:underline">+1 (555) 123-4567</a>
+                  Phone: <a href="tel:+16308871162" className="hover:underline">+1 (630) 887-1162</a>
                 </p>
               </div>
             </div>

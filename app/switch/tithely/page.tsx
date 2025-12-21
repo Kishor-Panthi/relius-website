@@ -4,7 +4,6 @@ import { ArrowRight, CheckCircle2, ArrowLeft, Sparkles, Clock, FileDown } from "
 import { Button } from "@/components/ui/button";
 import { ComparisonTable } from "@/components/ui/comparison-table";
 import { MigrationSteps } from "@/components/ui/migration-steps";
-import { SingleMigrationTestimonial } from "@/components/sections/migration-testimonials";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/data/migrations";
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
@@ -206,20 +205,6 @@ export default function TithelyMigrationPage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="py-16 px-6 lg:px-8 bg-slate-50">
-        <div className="container-width">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-slate-900">
-                Churches who made the switch
-              </h2>
-            </div>
-            <SingleMigrationTestimonial testimonial={platform.testimonial} />
-          </div>
-        </div>
-      </section>
-
       {/* Common Concerns */}
       <section className="py-16 px-6 lg:px-8 bg-white">
         <div className="container-width">
@@ -274,7 +259,7 @@ export default function TithelyMigrationPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to switch from {platform.name}?
             </h2>
-            <p className="text-xl text-slate-300 mb-10">
+            <p className="text-xl text-slate-200 mb-10">
               Start your free trial and bring your church data with you. Our team is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -134,8 +134,8 @@ export default function RoadmapPage() {
                     </div>
                     <div className="flex-1 bg-white border border-slate-200 rounded-xl p-6 text-center">
                         <Users className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                        <h4 className="font-bold text-slate-900">Beta Program</h4>
-                        <p className="text-sm text-slate-600">Want early access? Email beta@relius.ai to join our testing cohort.</p>
+                        <h4 className="font-bold text-slate-900">Early Access</h4>
+                        <p className="text-sm text-slate-600">Want to try new features first? Email contact@relius.ai to join our testing cohort.</p>
                     </div>
                 </div>
 

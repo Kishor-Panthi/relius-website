@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     default: "Relius | Ministry-focused church software",
     template: "%s | Relius",
   },
-  description: "Relius is the ministry partner platform for churches-care for people, coordinate volunteers, plan services, and learn from real church stories.",
+  description: "Relius is the ministry partner platform for churches - care for people, coordinate volunteers, plan services, and save time with AI-powered tools.",
   keywords: [
     "church management software",
     "ministry software",
     "volunteer coordination",
     "pastoral care tools",
     "church resources",
-    "church stories",
+    "church software",
   ],
   authors: [{ name: "Relius" }],
   openGraph: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://relius.com",
     siteName: "Relius",
     title: "Relius | Ministry-focused church software",
-    description: "Care for people, organize volunteers, and access church stories, resources, and insights built with ministry leaders.",
+    description: "Care for people, organize volunteers, and save time with AI-powered church management built with ministry leaders.",
     images: [
       {
         url: "/og-image.png",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Relius | Ministry-focused church software",
-    description: "Stories, resources, and software that serve churches with warmth.",
+    description: "Resources and software that serve churches with warmth.",
     images: ["/og-image.png"],
   },
   robots: {

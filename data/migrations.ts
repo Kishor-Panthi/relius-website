@@ -12,15 +12,6 @@ export type MigrationFAQ = {
   answer: string;
 };
 
-export type MigrationTestimonial = {
-  quote: string;
-  person: string;
-  role: string;
-  church: string;
-  migrationTime: string;
-  dataPreserved: string[];
-};
-
 export type MigrationPlatform = {
   slug: string;
   name: string;
@@ -30,7 +21,6 @@ export type MigrationPlatform = {
   exportInstructions: string[];
   features: FeatureComparison[];
   faqs: MigrationFAQ[];
-  testimonial: MigrationTestimonial;
   whatYouGain: string[];
   commonConcerns: string[];
 };
@@ -143,14 +133,6 @@ export const migrationPlatforms: MigrationPlatform[] = [
         answer: "Yes, you'll export from People and Giving separately. Our wizard will guide you through combining them into your Relius database.",
       },
     ],
-    testimonial: {
-      quote: "We'd been on Planning Center for 5 years and thought switching would be a nightmare. The migration took less than 3 hours, and we had all our member data and 4 years of giving history intact. The AI features alone were worth the switch.",
-      person: "Rachel Morrison",
-      role: "Church Administrator",
-      church: "New Life Community Church",
-      migrationTime: "2.5 hours",
-      dataPreserved: ["1,847 member records", "4 years giving history", "Family relationships"],
-    },
     whatYouGain: [
       "All your tools in one platform instead of separate apps",
       "AI-powered content creation from your sermons",
@@ -206,14 +188,6 @@ export const migrationPlatforms: MigrationPlatform[] = [
         answer: "Actually, most users find Relius easier. It's designed with modern UX principles and doesn't require training manuals to figure out.",
       },
     ],
-    testimonial: {
-      quote: "ChurchTrac served us well for 8 years, but it was showing its age. Moving to Relius felt like upgrading from a flip phone to a smartphone. The AI features are incredible - we save hours every week on sermon content alone.",
-      person: "Pastor David Chen",
-      role: "Senior Pastor",
-      church: "Grace Fellowship",
-      migrationTime: "3 hours",
-      dataPreserved: ["2,100 member records", "6 years donation history", "Attendance records"],
-    },
     whatYouGain: [
       "A modern, beautiful interface your team will actually enjoy using",
       "Cloud-based access from anywhere - no software installations",
@@ -270,14 +244,6 @@ export const migrationPlatforms: MigrationPlatform[] = [
         answer: "Yes! Tags are one of the data types we import from Tithe.ly. Your segmentation and tagging will come right over.",
       },
     ],
-    testimonial: {
-      quote: "We started with Tithe.ly for giving but needed more than just donations. Relius gave us everything - people management, events, volunteers, and AI tools we didn't know we needed. The migration brought over 3 years of data in one afternoon.",
-      person: "Jessica Park",
-      role: "Operations Director",
-      church: "Hillside Church",
-      migrationTime: "4 hours",
-      dataPreserved: ["890 member records", "3 years giving history", "All tags and segments", "Newsletter subscribers"],
-    },
     whatYouGain: [
       "A complete church management platform, not just giving",
       "AI-powered content creation from your sermons",

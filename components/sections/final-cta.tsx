@@ -21,7 +21,7 @@ export function FinalCta() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="accent" size="lg" asChild className="group shadow-lg">
               <a href={DEFAULT_SIGNUP_URL}>
-                Join the Beta
+                Get Started Free
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>

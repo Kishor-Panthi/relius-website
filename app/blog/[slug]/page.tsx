@@ -103,7 +103,7 @@ export default function BlogPostPage({ params }: BlogPageProps) {
                 <Link href="/contact">Start a conversation</Link>
               </Button>
               <Button variant="secondary" size="lg" asChild>
-                <Link href="/stories">Read ministry stories</Link>
+                <Link href="/use-cases">Explore use cases</Link>
               </Button>
             </div>
           </CardContent>

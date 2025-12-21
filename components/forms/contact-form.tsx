@@ -8,6 +8,10 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+// Cloudflare Worker endpoint for form submissions
+// TODO: Replace with your actual Cloudflare Worker URL after deployment
+const FORM_ENDPOINT = "https://relius-demo-form.YOUR_SUBDOMAIN.workers.dev";
+
 const CURRENT_SOFTWARE_OPTIONS = [
   { value: "", label: "Select current software" },
   { value: "planning-center", label: "Planning Center" },
@@ -82,13 +86,36 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          church: data.church,
+          memberSize: data.memberSize,
+          currentSoftware: data.currentSoftware || "",
+          primaryInterest: data.primaryInterest || "",
+          goals: data.goals,
+          honeypot: data.honeypot,
+        }),
+      });
 
-    console.log("Form submitted:", data);
+      const result = await response.json();
 
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    reset();
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Failed to submit form");
+      }
+
+      setIsSubmitted(true);
+      reset();
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("There was an error submitting the form. Please try again or email us directly at contact@relius.ai");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {

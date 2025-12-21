@@ -36,7 +36,7 @@ export default function FeaturesPage() {
                 <Link href="/contact">Walk through the platform</Link>
               </Button>
               <Button variant="secondary" asChild>
-                <Link href="/stories">See church stories</Link>
+                <Link href="/use-cases">See use cases</Link>
               </Button>
             </div>
           </div>
