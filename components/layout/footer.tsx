@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Youtube, Mail } from "lucide-react";
 
 export function Footer() {
   const footerLinks = {
@@ -61,6 +61,13 @@ export function Footer() {
             <p className="text-sm text-slate-600 leading-relaxed max-w-xs">
               The modern Church Management System with built-in AI. Empowering churches to focus on people, not paperwork.
             </p>
+            <a
+              href="mailto:support@relius.ai"
+              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary transition-colors"
+            >
+              <Mail className="h-4 w-4" />
+              support@relius.ai
+            </a>
             <div className="flex gap-4">
               {socialLinks.map((item) => {
                 const Icon = item.icon;
