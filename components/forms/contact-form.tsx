@@ -9,8 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 // Cloudflare Worker endpoint for form submissions
-// TODO: Replace with your actual Cloudflare Worker URL after deployment
-const FORM_ENDPOINT = "https://relius-demo-form.YOUR_SUBDOMAIN.workers.dev";
+const FORM_ENDPOINT = "https://relius-contact-form.kishor-panthi00.workers.dev";
 
 const CURRENT_SOFTWARE_OPTIONS = [
   { value: "", label: "Select current software" },
