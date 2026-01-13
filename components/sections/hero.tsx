@@ -12,8 +12,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-pattern-grid opacity-[0.03]" />
 
       {/* Angel Halo Effect */}
-      {/* Angel Halo Effect */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-[900px] opacity-80 pointer-events-none mix-blend-multiply z-0">
+      <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-full max-w-[1600px] h-[1100px] opacity-90 pointer-events-none mix-blend-multiply z-0">
         <Image
           src="/halo-effect-rectangle.png"
           alt="Angel Halo"
