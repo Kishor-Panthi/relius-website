@@ -13,7 +13,7 @@ export default function PrivacyPage() {
         <div className="mb-12">
           <p className="text-sm font-semibold uppercase tracking-wide text-primary-600 mb-3">Legal</p>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Privacy Policy</h1>
-          <p className="text-slate-500">Last updated: December 21, 2025</p>
+          <p className="text-slate-500">Last updated: January 12, 2026</p>
         </div>
 
         {/* Table of Contents */}
@@ -30,8 +30,9 @@ export default function PrivacyPage() {
             <li><a href="#ccpa" className="text-primary-600 hover:text-primary-700">8. California Privacy Rights (CCPA)</a></li>
             <li><a href="#children" className="text-primary-600 hover:text-primary-700">9. Children&apos;s Privacy</a></li>
             <li><a href="#cookies" className="text-primary-600 hover:text-primary-700">10. Cookies and Tracking</a></li>
-            <li><a href="#changes" className="text-primary-600 hover:text-primary-700">11. Changes to This Policy</a></li>
-            <li><a href="#contact" className="text-primary-600 hover:text-primary-700">12. Contact Us</a></li>
+            <li><a href="#third-party-integrations" className="text-primary-600 hover:text-primary-700">11. Third-Party Integrations</a></li>
+            <li><a href="#changes" className="text-primary-600 hover:text-primary-700">12. Changes to This Policy</a></li>
+            <li><a href="#contact" className="text-primary-600 hover:text-primary-700">13. Contact Us</a></li>
           </ul>
         </nav>
 
@@ -119,6 +120,7 @@ export default function PrivacyPage() {
             </p>
             <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
               <li><strong>Stripe:</strong> Processes all payments securely. See <a href="https://stripe.com/privacy" className="text-primary-600 hover:text-primary-700" target="_blank" rel="noopener noreferrer">Stripe&apos;s Privacy Policy</a></li>
+              <li><strong>Google:</strong> Provides optional Google Drive integration for document linking (see <a href="#third-party-integrations" className="text-primary-600 hover:text-primary-700">Third-Party Integrations</a> section)</li>
               <li><strong>Cloud Infrastructure:</strong> Hosts and stores your data securely</li>
               <li><strong>Analytics Providers:</strong> Help us understand how the Service is used</li>
               <li><strong>Email Services:</strong> Deliver transactional and administrative emails</li>
@@ -224,15 +226,63 @@ export default function PrivacyPage() {
             </p>
           </section>
 
+          <section id="third-party-integrations" className="mb-12">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">11. Third-Party Integrations</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Relius offers optional integrations with third-party services to enhance functionality. When you choose to connect these services, additional data may be accessed or stored.
+            </p>
+
+            <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-3">Google Drive Integration</h3>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Our Repository feature allows you to connect your Google Drive account to browse and link documents to your church&apos;s shared repository. When you enable this integration:
+            </p>
+
+            <h4 className="text-lg font-semibold text-slate-900 mt-4 mb-2">Data We Access</h4>
+            <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
+              <li><strong>Google Account Information:</strong> Your Google email address and basic profile information (name) to identify your connected account</li>
+              <li><strong>Google Drive Files (Read-Only):</strong> We access your Google Drive to display file names, types, sizes, thumbnails, and folder structure so you can browse and select documents to link</li>
+            </ul>
+
+            <h4 className="text-lg font-semibold text-slate-900 mt-4 mb-2">How We Use This Data</h4>
+            <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
+              <li>Display your connected Google account email for verification purposes</li>
+              <li>Allow you to browse your Google Drive files within Relius</li>
+              <li>Store links and metadata (file name, type, size) of documents you choose to add to your church repository</li>
+              <li>Your actual files remain stored in Google Drive—we do not download or copy file contents</li>
+            </ul>
+
+            <h4 className="text-lg font-semibold text-slate-900 mt-4 mb-2">Data Storage and Security</h4>
+            <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
+              <li>OAuth access tokens are encrypted at rest using AES-256 encryption</li>
+              <li>Tokens are stored per-user and can only be used by the authenticated user</li>
+              <li>We request only read-only access—we cannot modify or delete your Google Drive files</li>
+            </ul>
+
+            <h4 className="text-lg font-semibold text-slate-900 mt-4 mb-2">Revoking Access</h4>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              You can disconnect your Google account at any time through the Repository settings in Relius. When you disconnect:
+            </p>
+            <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
+              <li>Your OAuth tokens are immediately invalidated and removed from our systems</li>
+              <li>Linked document references remain in your repository (as they are now part of your church&apos;s data), but we can no longer access the files in your Google Drive</li>
+              <li>You can also revoke access directly through your <a href="https://myaccount.google.com/permissions" className="text-primary-600 hover:text-primary-700" target="_blank" rel="noopener noreferrer">Google Account permissions settings</a></li>
+            </ul>
+
+            <h4 className="text-lg font-semibold text-slate-900 mt-4 mb-2">Google&apos;s Privacy Policy</h4>
+            <p className="text-slate-600 leading-relaxed">
+              Your use of Google Drive is also subject to <a href="https://policies.google.com/privacy" className="text-primary-600 hover:text-primary-700" target="_blank" rel="noopener noreferrer">Google&apos;s Privacy Policy</a>. We encourage you to review their policies for information about how Google handles your data.
+            </p>
+          </section>
+
           <section id="changes" className="mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">11. Changes to This Policy</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">12. Changes to This Policy</h2>
             <p className="text-slate-600 leading-relaxed">
               We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date. For significant changes, we will provide additional notice via email or through the Service. Your continued use of the Service after any changes indicates your acceptance of the updated Privacy Policy.
             </p>
           </section>
 
           <section id="contact" className="mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">12. Contact Us</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">13. Contact Us</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
               If you have any questions about this Privacy Policy or our data practices, please contact us:
             </p>
