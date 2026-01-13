@@ -26,7 +26,8 @@
       "Bash(xargs cat:*)",
       "Bash(grep:*)",
       "Bash(dir /b \"c:\\\\Users\\\\Kishor\\\\relius-website\\\\public\\\\images\\\\blog\"\")",
-      "Bash(tasklist:*)"
+      "Bash(tasklist:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/hero";
+import { InteractiveDemo } from "@/components/demo";
 import { WhyRelius } from "@/components/sections/why-relius";
 import { KpiStripe } from "@/components/sections/kpi-stripe";
 import { ProductPillars } from "@/components/sections/product-pillars";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <InteractiveDemo />
       <WhyRelius />
       <KpiStripe />
       <ProductPillars />
