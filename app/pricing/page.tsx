@@ -98,7 +98,7 @@ export default function PricingPage() {
     },
     {
       question: "Is there a free trial?",
-      answer: "Yes! We offer a 14-day free trial so you can experience Relius risk-free. No credit card required to start. We'll walk you through setup so you can see how it fits your church.",
+      answer: "Yes! We offer a 14-day free trial so you can experience Relius risk-free. We'll walk you through setup so you can see how it fits your church.",
     },
     {
       question: "Are there member limits on any plan?",

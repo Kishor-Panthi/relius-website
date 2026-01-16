@@ -97,7 +97,7 @@ export default function IntegrationsPage() {
         <div className="bg-gray-50 rounded-2xl p-12 text-center">
           <h3 className="mb-4">Need a Custom Integration?</h3>
           <p className="text-lg text-slate-500 mb-6 max-w-2xl mx-auto">
-            Enterprise plans include custom integration support. We can work with your team to connect Relius to your existing tools.
+            Max plans include custom integration support and API access. We can work with your team to connect Relius to your existing tools.
           </p>
           <Badge variant="secondary" className="text-sm">
             API Documentation Coming Soon

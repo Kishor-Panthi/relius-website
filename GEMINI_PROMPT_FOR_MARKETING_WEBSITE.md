@@ -138,32 +138,34 @@ Relius is a next-generation church management system (ChMS) that combines compre
 
 ### PRICING MODEL
 
-**BASIC - $29/month**
-- Up to 100 members
+**BASIC - $39.99/month**
+- Unlimited members, events, and groups
 - Core ChMS features (People, Groups, Events, Donations)
-- Basic reporting
-- Email/SMS communication
-- No AI features
+- Check-In System & QR Codes
+- Volunteer Scheduling
+- Data Migration Wizard
+- Email support
 
-**PRO - $79/month** (Primary target tier)
-- Up to 500 members
+**PRO - $79.99/month** (Primary target tier)
 - Everything in Basic, plus:
-- AI Sermon Planner
-- Content Studio (multi-channel)
-- Prayer request AI analysis
-- AI Insights & recommendations
-- Translation (limited quota)
-- Volunteer matching AI
-- Advanced analytics
+- Pastoral Care System
+- Prayer Request Management
+- Follow-up Tracking & Milestones
+- New Member Contact Tasks
+- Advanced Reporting
+- Custom Branding
+- Priority support (email & phone)
 
-**ENTERPRISE - $199+/month**
-- Unlimited members
+**MAX - $199.99/month**
 - Everything in Pro, plus:
-- Higher AI quotas
-- Multi-church support
-- Custom integrations
-- Dedicated support
-- SLA guarantees
+- AI Content Studio
+- AI Sermon Planner
+- AI Pastoral Insights
+- Sentiment Analysis
+- Translation Console (50+ languages)
+- AI-Powered Donor Analytics
+- API Access
+- Dedicated Success Partner
 
 ---
 
@@ -175,13 +177,13 @@ Relius is a next-generation church management system (ChMS) that combines compre
 | Multi-Channel Content | Yes | No | Limited |
 | Prayer AI Analysis | Yes | No | No |
 | Sermon Planning AI | Yes | No | No |
-| Starting Price | $29/mo | $199/mo | $99/mo |
+| Starting Price | $39.99/mo | $199/mo | $99/mo |
 | Modern Tech Stack | React 19, FastAPI | Legacy | Legacy |
 | Cloud-Native | Yes | Legacy | Legacy |
 
 **Key Differentiators:**
 1. AI-first architecture (not bolted on)
-2. 70% lower starting price than Planning Center
+2. 80% lower starting price than Planning Center
 3. Multi-channel content generation (unique in market)
 4. Modern, intuitive interface
 5. Cloud-native scalability

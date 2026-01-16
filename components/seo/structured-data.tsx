@@ -27,7 +27,7 @@ export function StructuredData() {
       "AI-powered church management software with volunteer scheduling, pastoral care tracking, member database, and content generation tools.",
     offers: {
       "@type": "Offer",
-      price: "29",
+      price: "39.99",
       priceCurrency: "USD",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
@@ -67,7 +67,7 @@ export function StructuredData() {
         name: "How much does Relius cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Relius starts at $29/month for small churches (up to 100 members). We offer a 14-day free trial with no credit card required. Professional plans for larger churches start at $99/month.",
+          text: "Relius starts at $39.99/month for the Basic plan with unlimited members. We offer a 14-day free trial. Pro plan is $79.99/month and Max plan is $199.99/month.",
         },
       },
       {

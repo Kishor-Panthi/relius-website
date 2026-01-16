@@ -29,9 +29,9 @@
 
 | Segment | Size | Typical Needs | Best Fit Tier |
 |---------|------|---------------|---------------|
-| **Small Churches** | Under 100 members | Basic member tracking, simple event management, donation records | Basic |
-| **Growing Churches** | 100-500 members | AI-powered content, volunteer scheduling, pastoral insights, advanced reporting | Professional |
-| **Large/Multi-Site** | 500+ members | Unlimited scale, API access, custom integrations, SSO, white-labeling | Enterprise |
+| **Small Churches** | Any size | Basic member tracking, simple event management, donation records | Basic |
+| **Growing Churches** | Any size | Pastoral care tracking, prayer requests, follow-ups, advanced reporting | Pro |
+| **Large/Multi-Site** | Any size | AI features, content generation, API access, dedicated support | Max |
 
 ### User Personas
 
@@ -277,26 +277,26 @@ Relius Platform distinguishes itself through seven integrated AI capabilities:
 
 | Plan | Monthly | Yearly | Best For |
 |------|---------|--------|----------|
-| **Basic** | $29/month | $290/year | Small churches getting started |
-| **Professional** | $79/month | $790/year | Growing churches wanting AI features |
-| **Enterprise** | $199/month | $1,990/year | Large/multi-site organizations |
+| **Basic** | $39.99/month | $383.88/year | Churches wanting core management features |
+| **Pro** | $79.99/month | $767.88/year | Churches wanting Pastoral Care features |
+| **Max** | $199.99/month | $1,919.88/year | Churches wanting AI features |
 
 ### Pricing Strategy Notes
-- **2.7x jump** from Basic to Pro includes AI features (major differentiator)
-- **2.5x jump** from Pro to Enterprise adds unlimited scale + advanced features
+- **2x jump** from Basic to Pro includes Pastoral Care features
+- **2.5x jump** from Pro to Max adds AI features
 - **Pro is featured tier**: Positioned as the recommended plan for most churches
-- **Annual pricing** provides ~17% discount (2 months free)
+- **Annual pricing** provides ~20% discount
 
 ---
 
 ## Feature Comparison Matrix
 
-| Feature | Basic | Professional | Enterprise |
-|---------|:-----:|:------------:|:----------:|
-| **Capacity Limits** ||||
-| Members | 100 | 500 | Unlimited |
-| Events | 50 | 200 | Unlimited |
-| Groups | 10 | 50 | Unlimited |
+| Feature | Basic | Pro | Max |
+|---------|:-----:|:---:|:---:|
+| **Capacity** ||||
+| Members | Unlimited | Unlimited | Unlimited |
+| Events | Unlimited | Unlimited | Unlimited |
+| Groups | Unlimited | Unlimited | Unlimited |
 | **Core Features** ||||
 | Member Management | Yes | Yes | Yes |
 | Group Management | Yes | Yes | Yes |
@@ -306,25 +306,28 @@ Relius Platform distinguishes itself through seven integrated AI capabilities:
 | QR Code Generation | Yes | Yes | Yes |
 | Volunteer Scheduling | Yes | Yes | Yes |
 | Data Migration Wizard | Yes | Yes | Yes |
+| **Pastoral Care** ||||
+| Prayer Request Management | - | Yes | Yes |
+| Pastoral Follow-ups | - | Yes | Yes |
+| Member Milestones | - | Yes | Yes |
+| New Member Contact Tasks | - | Yes | Yes |
+| Care Notes & History | - | Yes | Yes |
 | **AI Features** ||||
-| AI Content Studio | - | Yes | Yes |
-| AI Sermon Planner | - | Yes | Yes |
-| AI Pastoral Insights | - | Yes | Yes |
-| Sentiment Analysis | - | Yes | Yes |
-| Translation Console | - | Yes | Yes |
-| Donor Analytics (AI) | Basic | Advanced | Advanced |
+| AI Content Studio | - | - | Yes |
+| AI Sermon Planner | - | - | Yes |
+| AI Pastoral Insights | - | - | Yes |
+| Sentiment Analysis | - | - | Yes |
+| Translation Console | - | - | Yes |
+| AI-Powered Donor Analytics | - | - | Yes |
 | **Advanced Features** ||||
 | Custom Branding | - | Yes | Yes |
 | Advanced Reporting | - | Yes | Yes |
-| Priority Support | - | Yes | Yes |
-| Prayer Request Management | - | Yes | Yes |
 | API Access | - | - | Yes |
-| Custom Integrations | - | - | Yes |
-| Multi-Site Management | - | - | Yes |
-| Single Sign-On (SSO) | - | - | Yes |
-| White-Labeling | - | - | Yes |
-| Advanced Security | - | - | Yes |
-| Dedicated Support | - | - | Yes |
+| **Support & Services** ||||
+| Email Support | Yes | Yes | Yes |
+| Phone Support | - | Yes | Yes |
+| Priority Support | - | Yes | Yes |
+| Dedicated Success Partner | - | - | Yes |
 
 ---
 
@@ -375,8 +378,8 @@ Relius is built as a modern cloud-native application:
 
 ### Integration Capabilities
 - **Webhooks**: Configurable webhook endpoints for external systems
-- **API Access**: Full REST API access for Enterprise tier
-- **Custom Integrations**: Enterprise-level custom development available
+- **API Access**: Full REST API access for Max tier
+- **Custom Integrations**: Custom development available for Max tier
 
 ### Future Integration Opportunities
 - Church Community Builder migration
@@ -488,7 +491,7 @@ Relius Platform is positioned as a **next-generation church management system** 
 2. **Easy switching** - Built-in migration from Planning Center, ChurchTrac, and Tithe.ly
 3. **All-in-one simplicity** - Replace multiple tools with one unified platform
 4. **Modern experience** - Clean, intuitive interface that staff actually enjoy using
-5. **Scalable pricing** - Grow from Basic to Enterprise as the church grows
+5. **Scalable pricing** - Grow from Basic to Pro to Max as the church grows
 6. **Cloud-native** - No IT infrastructure required, automatic updates, always available
 
 ---
